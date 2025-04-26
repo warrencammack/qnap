@@ -1,0 +1,32 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    environment:
+      - PUID=1000                          # User ID - this is the 'automedia' user
+      - PGID=100                          # Group ID
+      - TZ=Australia/Sydney                         # Timezone
+      #- TRANSMISSION_WEB_HOME=/transmission-web-control/ # Web UI (using built-in transmission-web-control) # Web UI (optional) - Transmission no longer bundles UI.
+      - USER=qnap                      # Username for WebUI
+      - PASS=qnap                      # Password for WebUI
+      - BLOCKLIST=true                     # Enable blocklist
+      - BLOCKLIST_URL=https://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz # Example blocklist URL
+      - UMASK=000                          # Set permissive umask to help with permission issues
+      - SKIP_CHOWN=true                    # Skip ownership change operations
+    volumes:
+      - /share/Container/containerapp/transmission/data:/config # Config files
+      - /share/Public/Incomplete:/downloads/incomplete      # Downloads location with shared mount flag :shared 
+      - /share/Public/Complete:/downloads/complete         # Completed downloads location with shared mount flag :shared
+      - /share/Public/watch:/watch              # Watch folder for auto-downloading with shared mount flag :shared
+    ports:
+      - 9091:9091                          # WebUI
+      - 51413:51413                        # Peer listening port
+      - 51413:51413/udp                    # Peer listening port (UDP)
+    restart: unless-stopped
+    privileged: true                       # Running in privileged mode
+    networks:
+      - transmission_network
+
+networks:
+  transmission_network:
+    driver: bridge

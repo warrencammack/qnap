@@ -1,0 +1,18 @@
+services:
+  sabnzbd:
+    image: lscr.io/linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Australia/Sydney
+      - UMASK=000                          # Set permissive umask to help with permission issues
+      - SKIP_CHOWN=true                    # Skip ownership change operations
+    volumes:
+      - /share/Container/containerapp/sabnzbd/config:/config # Config files
+      - /share/Public/Incomplete:/incomplete-downloads # Downloads location with shared mount flag :shared 
+      - /share/Public/Complete:/downloads        # Completed downloads location with shared mount flag :shared
+    ports:
+      - 8181:8080 # was 8080:8080
+    restart: unless-stopped
+    privileged: true                       # Running in privileged mode
