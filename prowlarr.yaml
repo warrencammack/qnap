@@ -1,0 +1,24 @@
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Australia/Sydney
+      - UMASK=000                          # Set permissive umask to help with permission issues
+      - SKIP_CHOWN=true                    # Skip ownership change operations
+    volumes:
+      - /share/Container/containerapp/prowlarr:/config # Config files
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+    privileged: true  
+    networks:
+      - default
+      - shared_network
+networks:
+  default:
+    driver: bridge
+  shared_network:
+    name: app_network                     # Running in privileged mode

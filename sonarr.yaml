@@ -1,0 +1,23 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Australia/Sydney
+    volumes:
+      - /share/Container/containerapp/sonarr/data:/config # Config files
+      - /share/Multimedia/TV:/tv # TV series location with shared mount flag :shared
+      - /share/Public/Incomplete:/downloads     # Completed downloads location with shared mount flag :shared
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+    networks:
+      - default
+      - shared_network
+networks:
+  default:
+    driver: bridge
+  shared_network:
+    name: app_network

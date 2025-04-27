@@ -1,0 +1,23 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Australia/Sydney
+    volumes:
+      - /share/Container/containerapp/radarr/data:/config # Config files
+      - /share/Multimedia/Movies:/movies # Movies location with shared mount flag :shared
+      - /share/Public/Incomplete:/downloads     # Completed downloads location with shared mount flag :shared
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+    networks:
+      - default
+      - shared_network
+networks:
+  default:
+    driver: bridge
+  shared_network:
+    name: app_network
