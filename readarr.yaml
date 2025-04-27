@@ -5,11 +5,14 @@ services:
     environment:
       - PUID=1000
       - PGID=100
-      - TZ=Etc/UTC
+      - TZ=Australia/Sydney
+      - UMASK=000                          # Set permissive umask to help with permission issues
+      - SKIP_CHOWN=true                    # Skip ownership change operations
     volumes:
       - /share/Container/containerapp/readarr/data:/config
-      - /share/Media/ebooks:/books #optional
+      - /share/Media/eBook:/ebooks #optional
       - /share/Public/Incomplete:/downloads #optional
     ports:
       - 8787:8787
     restart: unless-stopped
+    privileged: true                       # Running in privileged mode
