@@ -8,7 +8,7 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /share/Container/containerapp/readarr/data:/config
-      - /share/Media/books:/books #optional
+      - /share/Media/ebooks:/books #optional
       - /share/Public/Incomplete:/downloads #optional
     ports:
       - 8787:8787
