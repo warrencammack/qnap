@@ -1,6 +1,6 @@
 services:
   filebot:
-    image: hub.docker.com/r/rednoah/filebot/:latest
+    image: rednoah/filebot:latest
     container_name: filebot
     environment:
       - PUID=1000
