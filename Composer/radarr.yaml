@@ -9,7 +9,8 @@ services:
     volumes:
       - /share/Container/containerapp/radarr/data:/config # Config files
       - /share/Multimedia/Movies:/movies # Movies location with shared mount flag :shared
-      - /share/Public/Incomplete:/downloads     # Completed downloads location with shared mount flag :shared
+     # - /share/Public/Incomplete:/downloads     # Completed downloads location with shared mount flag :shared
+      - /share/Public/Complete/radarr:/downloads/complete/radarr     # Completed downloads location with shared mount flag :shar
     ports:
       - 7878:7878
     restart: unless-stopped

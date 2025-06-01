@@ -5,10 +5,10 @@ services:
     environment:
       - PUID=1000
       - PGID=100
-      - TZ=Etc/UTC
+      - TZ=Australia/Sydney
     volumes:
       - /share/Container/containerapp/heimdall:/config # Config files
     ports:
-      - 80:80
-      - 443:443
+      - 8081:80
+      - 4431:443
     restart: unless-stopped

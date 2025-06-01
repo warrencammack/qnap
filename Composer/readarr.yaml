@@ -12,7 +12,9 @@ services:
       - /share/Container/containerapp/readarr/data:/config
       - /share/Multimedia/eBook:/ebooks #optional
       - /share/Multimedia/aBook:/abooks #optional
-      - /share/Public/Incomplete:/downloads #optional
+      - /share/Public/Complete:/downloads/complete #optional
+      #- /share/Public/Complete:/downloads #optional
+      #- /share/Public/Incomplete:/downloads #optional
     ports:
       - 8787:8787
     restart: unless-stopped
