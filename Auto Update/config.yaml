@@ -1,0 +1,34 @@
+# Auto-Update Configuration
+# Configure settings for the Docker auto-update system
+
+# Slack webhook configuration
+slack:
+  enabled: true
+  webhook_url: "YOUR_SLACK_WEBHOOK_URL_HERE"
+  channel: "#infrastructure"  # Optional: override default channel
+  username: "Docker Auto-Update"  # Optional: custom username
+
+# Update settings
+update:
+  # Services to exclude from updates (leave empty to update all)
+  exclude_services: []
+  
+  # Whether to remove old/unused images after update
+  cleanup_images: true
+  
+  # Maximum time to wait for container startup (seconds)
+  startup_timeout: 60
+  
+  # Maintenance window (24-hour format)
+  maintenance_window:
+    start_hour: 2    # 2:00 AM
+    end_hour: 6      # 6:00 AM
+    enforce: true    # Set to false to disable maintenance window check
+
+# Logging settings
+logging:
+  # Keep log files for this many days
+  retention_days: 30
+  
+  # Log level: DEBUG, INFO, WARN, ERROR
+  level: "INFO"

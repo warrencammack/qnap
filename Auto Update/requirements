@@ -1,0 +1,41 @@
+# QNAP Docker Auto-Update Requirements
+
+## Core Requirements
+- ✅ Weekly automatic updates of Docker containers running on QNAP Container Station
+- ✅ Pull latest images from external repositories (lscr.io/linuxserver/*)
+- ✅ Update all applications with Docker Compose files in the Composer/ directory
+- ✅ Slack webhook notifications for update results
+- ✅ Maintenance window enforcement (2:00 AM - 6:00 AM by default)
+- ✅ Automatic rollback if health checks fail after update
+- ✅ Comprehensive logging of all operations
+
+## Applications Managed
+- Sonarr (TV series management)
+- Radarr (Movie management)  
+- Readarr (Book management)
+- Prowlarr (Indexer proxy)
+- SABnzbd (Usenet downloader)
+- Transmission (BitTorrent client)
+- Heimdall (Application dashboard)
+
+## Technical Implementation
+- ✅ Bash script for main update logic
+- ✅ YAML configuration file for settings
+- ✅ Cron job for weekly scheduling
+- ✅ Docker image backup before updates
+- ✅ Container health checks post-update
+- ✅ Slack integration with rich notifications
+- ✅ Maintenance window validation
+- ✅ Error handling and rollback mechanisms
+
+## Files Created
+1. `auto-update.sh` - Main update script with rollback capabilities
+2. `config.yaml` - Configuration for Slack, maintenance windows, and update settings
+3. `setup-cron.sh` - Automated cron job installation
+4. `README.md` - Comprehensive setup and usage documentation
+
+## Next Steps
+1. Configure Slack webhook URL in config.yaml
+2. Test the update script manually
+3. Install the weekly cron job
+4. Monitor first automated run
