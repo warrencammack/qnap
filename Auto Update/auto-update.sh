@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+# Set Docker path for QNAP Container Station
+export PATH="/share/CACHEDEV1_DATA/.qpkg/container-station/bin:$PATH"
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 COMPOSER_DIR="$PROJECT_ROOT/Composer"
@@ -109,14 +112,19 @@ rollback_service() {
     cd "$COMPOSER_DIR"
     
     if [ -n "$backup_image" ]; then
-        sed -i.bak "s|image: .*|image: $backup_image|" "$compose_file"
+        # Stop and remove current container
+        docker stop "$service_name" >/dev/null 2>&1 || true
+        docker rm "$service_name" >/dev/null 2>&1 || true
         
-        if docker-compose -f "$compose_file" up -d --force-recreate; then
+        # Tag backup image as latest
+        docker tag "$backup_image" "${backup_image%:*}:latest" 2>/dev/null || true
+        
+        # Recreate container with backup image
+        if docker compose -f "$compose_file" up -d; then
             log "Successfully rolled back $service_name"
             return 0
         else
             log_error "Failed to rollback $service_name"
-            mv "$compose_file.bak" "$compose_file"
             return 1
         fi
     else
@@ -158,22 +166,38 @@ update_service() {
     local backup_image=$(backup_current_image "$service_name")
     log "Backed up current image: ${backup_image:-none}"
     
+    # Extract image name from compose file
+    local new_image=$(grep "image:" "$compose_file" | sed 's/.*image: *\(.*\)/\1/' | tr -d ' ')
+    
     log "Pulling latest image for $service_name..."
-    if docker-compose -f "$compose_file" pull; then
+    if docker pull "$new_image"; then
         log "Successfully pulled latest image for $service_name"
         
-        log "Recreating container for $service_name..."
-        if docker-compose -f "$compose_file" up -d --force-recreate; then
+        log "Stopping container $service_name..."
+        if docker stop "$service_name" >/dev/null 2>&1; then
+            log "Removing old container $service_name..."
+            docker rm "$service_name" >/dev/null 2>&1 || true
             
-            if health_check_service "$service_name"; then
-                log "Successfully updated $service_name"
+            log "Creating new container for $service_name..."
+            if docker compose -f "$compose_file" up -d; then
                 
-                log "Cleaning up old images..."
-                docker image prune -f >/dev/null 2>&1 || true
-                
-                return 0
+                if health_check_service "$service_name"; then
+                    log "Successfully updated $service_name"
+                    
+                    log "Cleaning up old images..."
+                    docker image prune -f >/dev/null 2>&1 || true
+                    
+                    return 0
+                else
+                    log_error "Health check failed for $service_name, attempting rollback..."
+                    if rollback_service "$compose_file" "$service_name" "$backup_image"; then
+                        return 2
+                    else
+                        return 1
+                    fi
+                fi
             else
-                log_error "Health check failed for $service_name, attempting rollback..."
+                log_error "Failed to create new container for $service_name, attempting rollback..."
                 if rollback_service "$compose_file" "$service_name" "$backup_image"; then
                     return 2
                 else
@@ -181,12 +205,8 @@ update_service() {
                 fi
             fi
         else
-            log_error "Failed to recreate container for $service_name, attempting rollback..."
-            if rollback_service "$compose_file" "$service_name" "$backup_image"; then
-                return 2
-            else
-                return 1
-            fi
+            log_error "Failed to stop container $service_name"
+            return 1
         fi
     else
         log_error "Failed to pull latest image for $service_name"

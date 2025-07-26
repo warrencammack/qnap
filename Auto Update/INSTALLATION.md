@@ -24,7 +24,7 @@ From your local machine terminal:
 # Replace 'your-qnap-ip' with your actual QNAP IP address
 # Replace 'admin' with your QNAP username if different
 
-scp -r "/Users/warrencammack/Documents/GitHub/qnap" admin@your-qnap-ip:/share/homes/admin/
+scp -r "/Users/warrencammack/Documents/GitHub/qnap" admin@10.1.1.5:/share/homes/admin/
 ```
 
 ### Option B: Using File Station
