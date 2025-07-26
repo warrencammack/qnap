@@ -9,7 +9,7 @@ services:
     volumes:
       - /share/Container/containerapp/sonarr/data:/config # Config files
       - /share/Multimedia/TV:/tv # TV series location with shared mount flag :shared
-      - /share/Public/Incomplete:/downloads     # Completed downloads location with shared mount flag :shared
+      - /share/Public/Complete/tv-sonarr:/downloads     # Completed downloads location with shared mount flag :shared
     ports:
       - 8989:8989
     restart: unless-stopped
