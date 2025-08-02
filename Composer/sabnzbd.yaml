@@ -11,7 +11,7 @@ services:
     volumes:
       - /share/Container/containerapp/sabnzbd/config:/config # Config files
       - /share/Public/Incomplete:/incomplete-downloads # Downloads location with shared mount flag :shared 
-      - /share/Public/Complete:/downloads        # Completed downloads location with shared mount flag :shared
+      - /share/Public/Complete:/downloads/complete        # Completed downloads location with shared mount flag :shared
     ports:
       - 8181:8080 # was 8080:8080
     restart: unless-stopped

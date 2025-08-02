@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+# QNAP Docker Auto-Update System
+# This script maintains each YAML file as a separate application on QNAP Container Station
+# Each service runs in isolation with its own networks and containers
+
 # Set Docker path for QNAP Container Station
 export PATH="/share/CACHEDEV1_DATA/.qpkg/container-station/bin:$PATH"
 
@@ -109,19 +113,21 @@ rollback_service() {
     
     log "Rolling back $service_name to previous image: $backup_image"
     
-    cd "$COMPOSER_DIR"
+    # Use the service directory, not a temporary one
+    local service_dir="$COMPOSER_DIR/$service_name"
     
     if [ -n "$backup_image" ]; then
-        # Stop and remove current container
-        docker stop "$service_name" >/dev/null 2>&1 || true
-        docker rm "$service_name" >/dev/null 2>&1 || true
+        cd "$service_dir"
+        
+        # Stop and remove current container and networks
+        docker compose -p "$service_name" -f "$(basename "$compose_file")" down --remove-orphans >/dev/null 2>&1 || true
         
         # Tag backup image as latest
         docker tag "$backup_image" "${backup_image%:*}:latest" 2>/dev/null || true
         
-        # Recreate container with backup image
-        if docker compose -f "$compose_file" up -d; then
-            log "Successfully rolled back $service_name"
+        # Recreate container with backup image as separate application
+        if docker compose -p "$service_name" -f "$(basename "$compose_file")" up -d --force-recreate; then
+            log "Successfully rolled back $service_name as separate application"
             return 0
         else
             log_error "Failed to rollback $service_name"
@@ -159,8 +165,9 @@ update_service() {
     local compose_file="$1"
     local service_name=$(basename "$compose_file" .yaml)
     
-    log "Starting update for $service_name..."
+    log "Starting update for $service_name as separate application..."
     
+    # Work directly from Composer directory
     cd "$COMPOSER_DIR"
     
     local backup_image=$(backup_current_image "$service_name")
@@ -169,48 +176,59 @@ update_service() {
     # Extract image name from compose file
     local new_image=$(grep "image:" "$compose_file" | sed 's/.*image: *\(.*\)/\1/' | tr -d ' ')
     
-    log "Pulling latest image for $service_name..."
-    if docker pull "$new_image"; then
-        log "Successfully pulled latest image for $service_name"
-        
-        log "Stopping container $service_name..."
-        if docker stop "$service_name" >/dev/null 2>&1; then
-            log "Removing old container $service_name..."
-            docker rm "$service_name" >/dev/null 2>&1 || true
-            
-            log "Creating new container for $service_name..."
-            if docker compose -f "$compose_file" up -d; then
-                
-                if health_check_service "$service_name"; then
-                    log "Successfully updated $service_name"
-                    
-                    log "Cleaning up old images..."
-                    docker image prune -f >/dev/null 2>&1 || true
-                    
-                    return 0
-                else
-                    log_error "Health check failed for $service_name, attempting rollback..."
-                    if rollback_service "$compose_file" "$service_name" "$backup_image"; then
-                        return 2
-                    else
-                        return 1
-                    fi
-                fi
-            else
-                log_error "Failed to create new container for $service_name, attempting rollback..."
-                if rollback_service "$compose_file" "$service_name" "$backup_image"; then
-                    return 2
-                else
-                    return 1
-                fi
-            fi
+    # Try to pull latest image, but continue with local image if it fails
+    log "Attempting to pull latest image for $service_name..."
+    local use_local_image=false
+    if ! docker pull "$new_image" 2>/dev/null; then
+        log "Failed to pull latest image for $service_name, checking for local image..."
+        if docker image inspect "$new_image" >/dev/null 2>&1; then
+            log "Using existing local image for $service_name: $new_image"
+            use_local_image=true
+        elif [ -n "$backup_image" ] && docker image inspect "$backup_image" >/dev/null 2>&1; then
+            log "Using backup image for $service_name: $backup_image"
+            new_image="$backup_image"
+            use_local_image=true
         else
-            log_error "Failed to stop container $service_name"
+            log_error "No local image available for $service_name"
             return 1
         fi
     else
-        log_error "Failed to pull latest image for $service_name"
-        return 1
+        log "Successfully pulled latest image for $service_name"
+    fi
+    
+    # Stop and remove any existing containers and networks for this service
+    log "Stopping and cleaning up existing $service_name application..."
+    docker compose -p "$service_name" -f "$(basename "$compose_file")" down --remove-orphans >/dev/null 2>&1 || true
+    
+    # Start the service as a separate application with project name
+    log "Creating new application for $service_name..."
+    if docker compose -p "$service_name" -f "$(basename "$compose_file")" up -d --force-recreate; then
+        
+        if health_check_service "$service_name"; then
+            log "Successfully updated $service_name as separate application"
+            
+            # Only cleanup old images if we pulled a new one
+            if [ "$use_local_image" = false ]; then
+                log "Cleaning up old images..."
+                docker image prune -f >/dev/null 2>&1 || true
+            fi
+            
+            return 0
+        else
+            log_error "Health check failed for $service_name, attempting rollback..."
+            if rollback_service "$compose_file" "$service_name" "$backup_image"; then
+                return 2
+            else
+                return 1
+            fi
+        fi
+    else
+        log_error "Failed to create new application for $service_name, attempting rollback..."
+        if rollback_service "$compose_file" "$service_name" "$backup_image"; then
+            return 2
+        else
+            return 1
+        fi
     fi
 }
 

@@ -25,6 +25,17 @@ update:
     end_hour: 6      # 6:00 AM
     enforce: true    # Set to false to disable maintenance window check
 
+# Image cleanup settings
+image_cleanup:
+  # How many versions to keep per repository (current + previous)
+  retention_versions: 2
+  
+  # Whether to cleanup dangling images and build cache
+  prune_system: true
+  
+  # Skip cleanup for these repositories (useful for pinned versions)
+  exclude_repositories: []
+
 # Logging settings
 logging:
   # Keep log files for this many days

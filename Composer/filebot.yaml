@@ -10,12 +10,13 @@ services:
       - SKIP_CHOWN=true                    # Skip ownership change operations
     volumes:
       - /share/Container/containerapp/filebot:/config # Config files
-      - /share/Multimedia/movies:/movies #optional
-      - /share/Multimedia/tv:/tv #optional
+      - /share/Multimedia/movies:/movies # Movies library
+      - /share/Multimedia/TV:/tv # TV series library
+      - /share/Public/Complete:/downloads/complete # Standard downloads location
     ports:
-      - 9696:9696
+      - 7676:7676 # FileBot web interface port
     restart: unless-stopped
-    privileged: true  
+    privileged: true # Running in privileged mode
     networks:
       - default
       - shared_network
@@ -23,4 +24,4 @@ networks:
   default:
     driver: bridge
   shared_network:
-    name: app_network                     # Running in privileged mode
+    name: app_network
