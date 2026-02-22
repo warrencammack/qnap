@@ -1,0 +1,35 @@
+# Environment files - NEVER commit
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+
+# Secrets
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.json
+service-account*.json
+
+# Logs (generated at runtime on QNAP)
+*.log
+
+# IDE
+.idea/
+.vscode/settings.json
+.DS_Store
+
+# Node (if any tooling added)
+node_modules/
+
+# Python (if any tooling added)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/

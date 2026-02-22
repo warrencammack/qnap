@@ -19,6 +19,15 @@ SLACK_WEBHOOK_URL=""
 SLACK_CHANNEL=""
 SLACK_USERNAME="Docker Auto-Update"
 
+json_escape() {
+    local string="$1"
+    string="${string//\\/\\\\}"    # \ → \\  (must be first)
+    string="${string//\"/\\\"}"    # " → \"
+    string="${string//$'\n'/\\n}"  # newline → \n
+    string="${string//$'\t'/\\t}"  # tab → \t
+    printf '%s' "$string"
+}
+
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
@@ -72,19 +81,24 @@ send_slack_notification() {
         return 0
     fi
     
+    local escaped_message escaped_username escaped_channel
+    escaped_message=$(json_escape "$message")
+    escaped_username=$(json_escape "$SLACK_USERNAME")
+    escaped_channel=$(json_escape "$SLACK_CHANNEL")
+
     local payload="{
-        \"username\": \"$SLACK_USERNAME\",
+        \"username\": \"$escaped_username\",
         \"attachments\": [
             {
                 \"color\": \"$color\",
                 \"title\": \"QNAP Docker Auto-Update\",
-                \"text\": \"$message\",
+                \"text\": \"$escaped_message\",
                 \"ts\": $(date +%s)
             }
         ]"
-    
+
     if [ -n "$SLACK_CHANNEL" ]; then
-        payload="$payload, \"channel\": \"$SLACK_CHANNEL\""
+        payload="$payload, \"channel\": \"$escaped_channel\""
     fi
     
     payload="$payload}"
@@ -113,11 +127,8 @@ rollback_service() {
     
     log "Rolling back $service_name to previous image: $backup_image"
     
-    # Use the service directory, not a temporary one
-    local service_dir="$COMPOSER_DIR/$service_name"
-    
     if [ -n "$backup_image" ]; then
-        cd "$service_dir"
+        cd "$COMPOSER_DIR"
         
         # Stop and remove current container and networks
         docker compose -p "$service_name" -f "$(basename "$compose_file")" down --remove-orphans >/dev/null 2>&1 || true
@@ -254,7 +265,8 @@ main() {
     for compose_file in "$COMPOSER_DIR"/*.yaml; do
         if [ -f "$compose_file" ]; then
             service_name=$(basename "$compose_file" .yaml)
-            result=$(update_service "$compose_file"; echo $?)
+            update_service "$compose_file"
+            result=$?
             
             case $result in
                 0)

@@ -7,11 +7,11 @@ services:
       - PGID=100                          # Group ID
       - TZ=Australia/Sydney                         # Timezone
       #- TRANSMISSION_WEB_HOME=/transmission-web-control/ # Web UI (using built-in transmission-web-control) # Web UI (optional) - Transmission no longer bundles UI.
-      - USER=qnap                      # Username for WebUI
-      - PASS=qnap                      # Password for WebUI
+    env_file:
+      - ./transmission.env             # WebUI credentials - copy transmission.env.example and fill in
       - BLOCKLIST=true                     # Enable blocklist
       - BLOCKLIST_URL=https://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz # Example blocklist URL
-      - UMASK=000                          # Set permissive umask to help with permission issues
+      - UMASK=002                          # Group-writable; all services share PGID=100 so cross-service file access works
       - SKIP_CHOWN=true                    # Skip ownership change operations
     volumes:
       - /share/Container/containerapp/transmission/data:/config # Config files
@@ -23,7 +23,7 @@ services:
       - 51413:51413                        # Peer listening port
       - 51413:51413/udp                    # Peer listening port (UDP)
     restart: unless-stopped
-    privileged: true                       # Running in privileged mode
+    # privileged mode removed - not required by linuxserver.io images; PUID/PGID + SKIP_CHOWN handle permissions
     networks:
       - default
       - shared_network

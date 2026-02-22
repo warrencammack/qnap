@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Skills
+Read and follow these skills before writing any code:
+- .claude/skills/base/SKILL.md
+- .claude/skills/security/SKILL.md
+- .claude/skills/project-tooling/SKILL.md
+- .claude/skills/session-management/SKILL.md
+
 ## Repository Overview
 
 This is a QNAP NAS media management system with two main components:

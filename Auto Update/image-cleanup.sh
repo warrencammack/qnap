@@ -32,6 +32,15 @@ get_config_value() {
     fi
 }
 
+json_escape() {
+    local string="$1"
+    string="${string//\\/\\\\}"    # \ → \\  (must be first)
+    string="${string//\"/\\\"}"    # " → \"
+    string="${string//$'\n'/\\n}"  # newline → \n
+    string="${string//$'\t'/\\t}"  # tab → \t
+    printf '%s' "$string"
+}
+
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
@@ -85,19 +94,24 @@ send_slack_notification() {
         return 0
     fi
     
+    local escaped_message escaped_username escaped_channel
+    escaped_message=$(json_escape "$message")
+    escaped_username=$(json_escape "$SLACK_USERNAME")
+    escaped_channel=$(json_escape "$SLACK_CHANNEL")
+
     local payload="{
-        \"username\": \"$SLACK_USERNAME\",
+        \"username\": \"$escaped_username\",
         \"attachments\": [
             {
                 \"color\": \"$color\",
                 \"title\": \"QNAP Docker Image Cleanup\",
-                \"text\": \"$message\",
+                \"text\": \"$escaped_message\",
                 \"ts\": $(date +%s)
             }
         ]"
-    
+
     if [ -n "$SLACK_CHANNEL" ]; then
-        payload="$payload, \"channel\": \"$SLACK_CHANNEL\""
+        payload="$payload, \"channel\": \"$escaped_channel\""
     fi
     
     payload="$payload}"

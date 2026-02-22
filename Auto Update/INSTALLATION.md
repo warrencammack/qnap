@@ -15,32 +15,64 @@ Follow these steps to install the Docker Auto-Update system on your QNAP NAS.
 3. Check **Allow SSH connection**
 4. Set port (default 22) and click **Apply**
 
-## Step 2: Copy Files to QNAP
+## Step 2: Deploy to QNAP
 
-### Option A: Using SCP (Recommended)
-From your local machine terminal:
+### Option A: Automated Deployment (Recommended)
+
+Use the deployment script to automate the entire setup process:
+
+```bash
+# From your local machine, navigate to the Auto Update directory
+cd "/Users/warrencammack/Documents/GitHub/Personal/qnap/Auto Update"
+
+# Run the deployment script
+./deploy-to-qnap.sh
+```
+
+The script will:
+- Test SSH connectivity to your QNAP
+- Copy all files to the QNAP
+- Make scripts executable
+- Optionally run a test update
+- Optionally install cron jobs for auto-updates and image cleanup
+
+**Note:** You may need to edit the script first if your configuration differs:
+- QNAP IP address (default: 10.1.1.5)
+- QNAP username (default: admin)
+- Local repository path
+- SSH key location (default: ~/.ssh/qnap_rsa_key)
+
+### Option B: Manual Deployment with SCP
+
+If you prefer manual control, copy files using SCP:
 
 ```bash
 # Replace 'your-qnap-ip' with your actual QNAP IP address
 # Replace 'admin' with your QNAP username if different
+# Replace the local path with your actual repository location
 
-scp -r "/Users/warrencammack/Documents/GitHub/qnap" admin@10.1.1.5:/share/homes/admin/
+scp -i ~/.ssh/qnap_rsa_key -r "/Users/warrencammack/Documents/GitHub/Personal/qnap" admin@10.1.1.5:/share/CACHEDEV1_DATA/homes/admin/
 ```
 
-### Option B: Using File Station
+Then continue with Step 3 below for manual setup.
+
+### Option C: Using File Station
+
 1. Open QNAP File Station
 2. Navigate to your home directory
 3. Create folder called `qnap`
 4. Upload all files from your local `qnap` folder
 
-## Step 3: SSH into QNAP and Setup
+Then continue with Step 3 below for manual setup.
+
+## Step 3: Manual Setup (Only if not using automated deployment)
 
 ```bash
-# Connect to your QNAP
-ssh admin@your-qnap-ip
+# Connect to your QNAP (uses SSH key authentication)
+ssh -i ~/.ssh/qnap_rsa_key admin@10.1.1.5
 
 # Navigate to the project directory
-cd /share/homes/admin/qnap/Auto\ Update
+cd "/share/CACHEDEV1_DATA/homes/admin/qnap/Auto Update"
 
 # Make scripts executable
 chmod +x auto-update.sh
@@ -93,7 +125,7 @@ crontab -l
 
 The script assumes your Docker Compose files are in:
 ```
-/share/homes/admin/qnap/Composer/
+/share/CACHEDEV1_DATA/homes/admin/qnap/Composer/
 ```
 
 If your files are in a different location, edit the script:
@@ -122,7 +154,7 @@ which docker-compose
 ### Path Issues
 ```bash
 # Verify your Composer files location
-ls -la /share/homes/admin/qnap/Composer/
+ls -la /share/CACHEDEV1_DATA/homes/admin/qnap/Composer/
 
 # If different, update the COMPOSER_DIR in auto-update.sh
 ```
@@ -139,7 +171,7 @@ tail -f cron.log
 ## File Locations After Installation
 
 ```
-/share/homes/admin/qnap/
+/share/CACHEDEV1_DATA/homes/admin/qnap/
 ├── Auto Update/
 │   ├── auto-update.sh          # Main script
 │   ├── config.yaml             # Configuration
@@ -158,16 +190,16 @@ tail -f cron.log
 ### View Logs
 ```bash
 # Live update logs
-tail -f /share/homes/admin/qnap/Auto\ Update/auto-update.log
+tail -f "/share/CACHEDEV1_DATA/homes/admin/qnap/Auto Update/auto-update.log"
 
 # Cron execution logs
-tail -f /share/homes/admin/qnap/Auto\ Update/cron.log
+tail -f "/share/CACHEDEV1_DATA/homes/admin/qnap/Auto Update/cron.log"
 ```
 
 ### Manual Updates
 ```bash
 # Run update manually anytime
-cd /share/homes/admin/qnap/Auto\ Update
+cd "/share/CACHEDEV1_DATA/homes/admin/qnap/Auto Update"
 ./auto-update.sh
 ```
 
