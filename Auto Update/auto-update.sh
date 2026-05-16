@@ -172,21 +172,113 @@ health_check_service() {
     return 1
 }
 
+resolve_latest_ghcr_tag() {
+    # Resolves the latest tag for images with pinned version tags (no rolling :latest)
+    # Usage: resolve_latest_ghcr_tag "linuxserver/readarr" "nightly"
+    # Returns the full tag e.g. "nightly-0.4.19.2811-ls400"
+    local repo="$1"
+    local prefix="$2"
+
+    local token
+    token=$(curl -s "https://ghcr.io/token?scope=repository:${repo}:pull" | grep -o '"token":"[^"]*"' | cut -d'"' -f4)
+    if [ -z "$token" ]; then
+        log_error "Failed to get registry token for $repo"
+        return 1
+    fi
+
+    local all_tags=""
+    local last=""
+    local i=0
+    while [ $i -lt 10 ]; do
+        local url="https://ghcr.io/v2/${repo}/tags/list?n=1000"
+        if [ -n "$last" ]; then
+            url="${url}&last=${last}"
+        fi
+        local tags
+        tags=$(curl -s -H "Authorization: Bearer $token" "$url" \
+            | grep -o "\"${prefix}-[0-9][^\"]*\"" \
+            | tr -d '"' \
+            | grep -E "^${prefix}-[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+-ls[0-9]+$")
+        if [ -z "$tags" ]; then break; fi
+        all_tags="${all_tags}
+${tags}"
+        last=$(echo "$tags" | tail -1)
+        i=$((i + 1))
+    done
+
+    local latest
+    latest=$(echo "$all_tags" | awk -F'[-.]' '{printf "%04d%04d%04d%06d %s\n", $2, $3, $4, $5, $0}' | sort -n | tail -1 | awk '{print $2}')
+
+    if [ -z "$latest" ]; then
+        log_error "No tags found for $repo with prefix $prefix"
+        return 1
+    fi
+
+    echo "$latest"
+}
+
+update_pinned_image_tag() {
+    # For services with pinned version tags, resolve and update the compose file
+    # Returns 0 if tag was updated, 1 if already latest or error
+    local compose_file="$1"
+    local current_image="$2"
+
+    # Map of pinned images to their registry repo and tag prefix
+    # Add entries here for any image that uses pinned version tags
+    local repo="" prefix=""
+    case "$current_image" in
+        lscr.io/linuxserver/readarr:nightly-*)
+            repo="linuxserver/readarr"
+            prefix="nightly"
+            ;;
+        *)
+            return 1  # Not a pinned image, skip
+            ;;
+    esac
+
+    local registry="lscr.io"
+    local image_base="${current_image%%:*}"
+    local current_tag="${current_image##*:}"
+
+    log "Resolving latest $prefix tag for $image_base..."
+    local latest_tag
+    latest_tag=$(resolve_latest_ghcr_tag "$repo" "$prefix")
+    if [ $? -ne 0 ] || [ -z "$latest_tag" ]; then
+        log_error "Failed to resolve latest tag for $image_base"
+        return 1
+    fi
+
+    if [ "$current_tag" = "$latest_tag" ]; then
+        log "$image_base is already at latest: $latest_tag"
+        return 1
+    fi
+
+    log "Updating $image_base from $current_tag to $latest_tag"
+    sed -i "s|${image_base}:${current_tag}|${image_base}:${latest_tag}|g" "$compose_file"
+    return 0
+}
+
 update_service() {
     local compose_file="$1"
     local service_name=$(basename "$compose_file" .yaml)
-    
+
     log "Starting update for $service_name as separate application..."
-    
+
     # Work directly from Composer directory
     cd "$COMPOSER_DIR"
-    
+
     local backup_image=$(backup_current_image "$service_name")
     log "Backed up current image: ${backup_image:-none}"
-    
+
     # Extract image name from compose file
     local new_image=$(grep "image:" "$compose_file" | sed 's/.*image: *\(.*\)/\1/' | tr -d ' ')
-    
+
+    # For pinned-version images, resolve the latest tag and update compose file
+    if update_pinned_image_tag "$compose_file" "$new_image"; then
+        new_image=$(grep "image:" "$compose_file" | sed 's/.*image: *\(.*\)/\1/' | tr -d ' ')
+        log "Updated compose file to new image: $new_image"
+    fi
+
     # Try to pull latest image, but continue with local image if it fails
     log "Attempting to pull latest image for $service_name..."
     local use_local_image=false

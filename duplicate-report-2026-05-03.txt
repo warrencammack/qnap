@@ -1,0 +1,850 @@
+QNAP Duplicate Video File Report — 2026-05-03
+Files to delete: 279
+Total recoverable: 2.90 TB (2970 GB)
+
+DELETION METHOD: Use QNAP FileStation at https://10.1.1.5
+  OR: ssh into a running Docker container (Radarr/Sonarr) which has /Multimedia mounted
+
+PRIORITY 1 — ≥20GB files (44 files, 1677GB)
+--------------------------------------------------------------------------------
+  DEL (76.7GB): Movies/General/John Wick Chapter 2 2017 PROPER/John.Wick.Chapter.2.2017.PROPER.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/John Wick Chapter 2 (2017)/John Wick Chapter 2 (2017) Remux-2160p Proper.mkv
+
+  DEL (75.3GB): Movies/General/The Great Gatsby 2013/The.Great.Gatsby.2013.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.5.1-FGT.mkv
+  KEEP:           Movies/General/The Great Gatsby (2013)/The Great Gatsby (2013) Remux-2160p.mkv
+
+  DEL (74.4GB): Movies/General/Top Gun Maverick 2022 IMAX/Top.Gun.Maverick.2022.IMAX.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/Top Gun Maverick (2022)/Top Gun Maverick (2022) Remux-2160p.mkv
+
+  DEL (74.3GB): Movies/General/John Wick Chapter 3 Parabellum 2019 PROPER/John.Wick.Chapter.3.Parabellum.2019.PROPER.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/John Wick Chapter 3 - Parabellum (2019)/John Wick Chapter 3 - Parabellum (2019) Remux-2160p Proper.mkv
+
+  DEL (66.0GB): Movies/General/No Time to Die 2021 4K HDR DV/No.Time.to.Die.2021.4K.HDR.DV.2160p.BDRemux Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/No Time to Die (2021)/No Time to Die (2021) Remux-2160p.mkv
+
+  DEL (60.3GB): Movies/General/Knives Out 2019/Knives.Out.2019.2160p.BluRay.REMUX.DV.HDR.ENG.LATINO.FRE.ITA.RUS.TrueHD.Atmos.7.1.DTS-HD.Master.7.1.H265-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Knives Out (2019)/Knives Out (2019) Remux-2160p.mkv
+
+  DEL (55.7GB): Movies/General/Ford v Ferrari 2019/Ford.v.Ferrari.2019.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/Ford v Ferrari (2019)/Ford v Ferrari (2019) Remux-2160p.mkv
+
+  DEL (54.5GB): Movies/General/Sisu 2022 4K HDR DV/Sisu.2022.4K.HDR.DV.2160p.BDRemux Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/Sisu (2023)/Sisu (2023) Remux-2160p.mkv
+
+  DEL (51.3GB): Movies/General/Jojo Rabbit 2019/Jojo.Rabbit.2019.2160p.BluRay.REMUX.DV.HDR.ENG.LATINO.FRE.ITA.DTS-HD.Master.H265-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Jojo Rabbit (2019)/Jojo Rabbit (2019) Remux-2160p.mkv
+
+  DEL (50.1GB): Movies/General/Star Wars Episode VIII The Last Jedi 2017 4K HDR/Star.Wars.Episode.VIII.The.Last.Jedi.2017.4K.HDR.2160p.BDRemux Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/Star Wars The Last Jedi (2017)/Star Wars The Last Jedi (2017) Remux-2160p.mkv
+
+  DEL (50.1GB): Movies/Kids/Lyle, Lyle, Crocodile (2022)/Lyle, Lyle, Crocodile (2022) Remux-2160p.mkv
+  KEEP:           Movies/General/Lyle, Lyle, Crocodile (2022)/Lyle, Lyle, Crocodile (2022) Remux-2160p.mkv
+
+  DEL (50.1GB): Movies/Kids/Lyle.Lyle.Crocodile.2022.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT/Lyle.Lyle.Crocodile.2022.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT-Copy(1).mkv
+  KEEP:           Movies/General/Lyle, Lyle, Crocodile (2022)/Lyle, Lyle, Crocodile (2022) Remux-2160p.mkv
+
+  DEL (50.1GB): Movies/Kids/Lyle.Lyle.Crocodile.2022.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT/Lyle.Lyle.Crocodile.2022.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/Lyle, Lyle, Crocodile (2022)/Lyle, Lyle, Crocodile (2022) Remux-2160p.mkv
+
+  DEL (50.1GB): Movies/General/The Martian 2015 EXTENDED/The.Martian.2015.EXTENDED.2160p.BluRay.REMUX.HEVC.DTS-HD.MA.TrueHD.7.1.Atmos-FGT.mkv
+  KEEP:           Movies/General/The Martian (2015)/The Martian (2015) Remux-2160p.mkv
+
+  DEL (48.9GB): Movies/Kids/Cinderella.1950.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.5.1-EPSiLON/Cinderella.1950.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.5.1-EPSiLON.mkv
+  KEEP:           Movies/Kids/Cinderella (1950)/Cinderella (1950) Remux-2160p.mkv
+
+  DEL (48.4GB): Movies/General/Terminator Dark Fate 2019/Terminator.Dark.Fate.2019.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC.REMUX-FraMeSToR.mkv
+  KEEP:           Movies/General/Terminator Dark Fate (2019)/Terminator Dark Fate (2019) Remux-2160p.mkv
+
+  DEL (42.9GB): Movies/General/Solo A Star Wars Story 2018 4K HDR DV/Solo.A.Star.Wars.Story.2018.4K.HDR.DV.2160p.BDRemux Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/Solo A Star Wars Story (2018)/Solo A Star Wars Story (2018) Remux-2160p.mkv
+
+  DEL (42.2GB): Movies/General/Zombieland Double Tap 2019/Zombieland.Double.Tap.2019.2160p.REMUX.For.LGTVs.Dolby.Vision.HDR.ENG.LATINO.RUS.FRE.GER.ITA.JAP.DDP.mp4
+  KEEP:           Movies/General/Zombieland Double Tap (2019)/Zombieland Double Tap (2019) Remux-2160p.mp4
+
+  DEL (35.5GB): Movies/Kids/WALL-E.2008.2160p.UHD.BDRemux.HDR.DoVi.P8.Hybrid.by.DVT.mkv
+  KEEP:           Movies/Kids/WALL·E (2008)/WALL·E (2008) Remux-2160p.mkv
+
+  DEL (32.1GB): Movies/General/Nocturnal Animals 2016/Nocturnal.Animals.2016.1080p.BluRay.REMUX.ENG.LATINO.POR.RUS.CZE.POL.HUN.DTS-HD.Master.DDP5.1.H264-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Nocturnal Animals (2016)/Nocturnal Animals (2016) Remux-1080p.mkv
+
+  DEL (30.5GB): Movies/General/Gone Girl 2014/Gone.Girl.2014.2160p.MA.WEB-DL.DTS-HD.MA.7.1.H.265-FLUX.mkv
+  KEEP:           Movies/General/Gone Girl (2014)/Gone Girl (2014) WEBDL-2160p.mkv
+
+  DEL (30.4GB): Movies/General/The Imitation Game 2014/The.Imitation.Game.2014.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-RARBG.mkv
+  KEEP:           Movies/General/The Imitation Game (2014)/The Imitation Game (2014) Remux-1080p.mkv
+
+  DEL (28.7GB): Movies/Kids/Harry.Potter.and.the.Prisoner.of.Azkaban.2004.Multi.BluRay.2160p.HDR.x265.DTS-X.7.1.[(En+Hi]-DTOne/Harry.Potter.and.the.Prisoner.of.Azkaban.2004.Multi.BluRay.2160p.HDR.x265.DTS-X.7.1.[(En+Hi]-DTOne.mkv
+  KEEP:           Movies/General/Harry Potter and the Prisoner of Azkaban (2004)/Harry Potter and the Prisoner of Azkaban (2004) Bluray-2160p.mkv
+
+  DEL (28.5GB): Movies/General/Westworld 1973 BluRay/westworld.1973.4k-kc.mkv
+  KEEP:           Movies/General/Westworld (1973)/Westworld (1973) Bluray-2160p.mkv
+
+  DEL (28.3GB): Movies/Kids/Spy.2015.2160p.WEBRip.x265.10bit.HDR.DD5.1-GASMASK/Spy.2015.2160p.HDR.WEBRip.DD.5.1.EN.FR.x265-GASMASK.mkv
+  KEEP:           Movies/General/Spy (2015)/Spy (2015) WEBRip-2160p.mkv
+
+  DEL (27.4GB): Movies/General/The Death of Stalin 2017/The.Death.of.Stalin.2017.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-FGT.mkv
+  KEEP:           Movies/General/The Death of Stalin (2017)/The Death of Stalin (2017) Remux-1080p.mkv
+
+  DEL (26.6GB): Movies/General/Escape From New York 1981/Escape.From.New.York.1981.1080p.BluRay.Remux.DTS-HD.5.1.mkv
+  KEEP:           Movies/General/Escape from New York (1981)/Escape from New York (1981) Remux-1080p.mkv
+
+  DEL (26.5GB): Movies/General/La La Land 2016/La.La.Land.2016.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+  KEEP:           Movies/General/La La Land (2016)/La La Land (2016) Bluray-2160p.mkv
+
+  DEL (25.7GB): Movies/General/Focus 2015/Focus.2015.1080p.BluRay.REMUX.ENG.LATINO.HINDI.CZE.HUN.POL.RUS.THAI.TUR.DTS-HD.Master.H264-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Focus (2015)/Focus (2015) Remux-1080p.mkv
+
+  DEL (25.6GB): Movies/General/Sicario (2015)/Sicario (2015) Unknown.mkv
+  KEEP:           Movies/General/Sicario (2015)/Sicario (2015) 2160p UHD BluRay HEVC HDR Atmos7.1-DDR/Sicario (2015) 2160p UHD BluRay HEVC HDR Atmos7.1-DDR.mkv
+
+  DEL (25.0GB): Movies/General/Vacation 2015/Vacation.2015.2160p.HDR.WEBRip.DTS-HD.MA.5.1.EN.FR.SPA.GER.x265-GASMASK.mkv
+  KEEP:           Movies/General/Vacation (2015)/Vacation (2015) WEBRip-2160p.mkv
+
+  DEL (24.6GB): Movies/General/Passengers 2016 Multi/Passengers 2016 Multi UHD BluRay 2160p HEVC HDR10 DTSHD 5.1 -DDR.mkv
+  KEEP:           Movies/General/Passengers (2016)/Passengers (2016) Unknown.mkv
+
+  DEL (24.5GB): Movies/Kids/Minions 2015 BluRay 1080p ReMux AVC DTS-HD MA TrueHD AC3 7.1-MgB/Minions 2015 BluRay 1080p ReMux AVC DTS-HD MA TrueHD AC3 7.1-MgB.mkv
+  KEEP:           Movies/General/Minions (2015)/Minions (2015) Remux-1080p.mkv
+
+  DEL (23.0GB): Movies/Kids/Home Alone 2 Lost in New York 1992 4K UHD HYBRID WEBRip DoVi HDR DTS-HD MA 5.1 H.265-MgB/Home Alone 2 Lost in New York 1992 4K UHD HYBRID WEBRip DoVi HDR DTS-HD MA 5.1 H.265-MgB.mkv
+  KEEP:           Movies/General/Home Alone 2 Lost in New York (1992)/Home Alone 2 Lost in New York (1992) WEBRip-2160p.mkv
+
+  DEL (22.9GB): Movies/Kids/Harry.Potter.and.the.Deathly.Hallows.Part.2.2011.2160p.UHD.BluRay.x265-DEPTH/Harry.Potter.and.the.Deathly.Hallows.Part.2.2011.2160p.UHD.BluRay.x265-DEPTH.mkv
+  KEEP:           Movies/General/Harry Potter and the Deathly Hallows Part 2 (2011)/Harry Potter and the Deathly Hallows Part 2 (2011) Bluray-2160p.mkv
+
+  DEL (22.8GB): Movies/General/The Favourite 2018/The.Favourite.2018.2160p.WEB-DL.x265.8bit.SDR.DTS-HD.MA.5.1-SWTYBLZ.mkv
+  KEEP:           Movies/General/The Favourite (2018)/The Favourite (2018) WEBDL-2160p.mkv
+
+  DEL (22.7GB): Movies/General/Star Trek Beyond 2016 Multi/Star.Trek.Beyond.2016.Multi.2160p.UHD.BluRay.x265.HDR.Atmos.7.1[En+Hi+]-DTOne.mkv
+  KEEP:           Movies/General/Star Trek Beyond (2016)/Star Trek Beyond (2016) Bluray-2160p.mkv
+
+  DEL (22.1GB): Movies/General/Transformers Age of Extinction (2014)/Transformers Age of Extinction (2014) Bluray-2160p.mkv
+  KEEP:           Movies/General/Transformers Age of Extinction (2014) (2160p/Transformers Age of Extinction (2014) (2160p UHD BluRay x265 DV HDR DDP 7.1 English - DiscoD HONE).mkv
+
+  DEL (21.0GB): Movies/General/The Zero Theorem 2013 LIMITED/The.Zero.Theorem.2013.LIMITED.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-RARBG.mkv
+  KEEP:           Movies/General/The Zero Theorem (2013)/The Zero Theorem (2013) Remux-1080p.mkv
+
+  DEL (20.6GB): Movies/Kids/The Lion King 2019 4K UHD BluRay 2160p HDR10 DTS-HD MA TrueHD 7.1 Atmos x265-MgB/The Lion King 2019 4K UHD BluRay 2160p HDR10 DTS-HD MA TrueHD 7.1 Atmos x265-MgB.mkv
+  KEEP:           Movies/General/The Lion King (2019)/The Lion King (2019) Bluray-2160p.mkv
+
+  DEL (20.6GB): Movies/Kids/Ratatouille 2007.MULTi.UHD.Blu-ray.2160p.HDR.Atmos.7.1.HEVC-DDR/Ratatouille 2007.MULTi.UHD.Blu-ray.2160p.HDR.Atmos.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Ratatouille (2007)/Ratatouille (2007) Unknown.mkv
+
+  DEL (20.1GB): Movies/General/The Day The Earth Stood Still (2008)/The Day the Earth Stood Still (2008) WEBRip-2160p.mkv
+  KEEP:           Movies/General/The Day The Earth Stood Still (2008)/Movie and Sample/The Day The Earth Stood Still Open Matte.mkv
+
+  DEL (20.1GB): Movies/General/The Day The Earth Stood Still 2008 Open Matte WEBRip/Movie and Sample/The Day The Earth Stood Still Open Matte.mkv
+  KEEP:           Movies/General/The Day The Earth Stood Still (2008)/Movie and Sample/The Day The Earth Stood Still Open Matte.mkv
+
+  DEL (20.0GB): Movies/General/The Dark Tower 2017/The Dark Tower 2017.UHD.BluRay.2160p.HEVC.HDR.Atmos.7.1-DDR.mkv
+  KEEP:           Movies/General/The Dark Tower (2017)/The Dark Tower (2017) Unknown.mkv
+
+PRIORITY 2 — 5-20GB files (89 files, 1024GB)
+--------------------------------------------------------------------------------
+  DEL (20.0GB): Movies/General/The Incredibles 2004 RERIP/The.Incredibles.2004.RERIP.2160p.BluRay.x265.10bit.SDR.TrueHD.7.1.Atmos-SWTYBLZ.mkv
+  KEEP:           Movies/General/The Incredibles (2004)/The Incredibles (2004) Bluray-2160p Proper.mkv
+
+  DEL (19.6GB): Movies/General/Ready Player One 2018 Multi/Ready.Player.One.2018.Multi.UHD.2160p.Bluray.x265.HDR.Atmos.7.1-DTOne.mkv
+  KEEP:           Movies/General/Ready Player One (2018)/Ready Player One (2018) Bluray-2160p.mkv
+
+  DEL (19.5GB): Movies/Kids/Frozen II 2019.MULTi.UHD.BluRay.2160p.HDR.TrueHD.Atmos.7.1.HEVC.DDR/Frozen.II.2019.MULTi.UHD.BluRay.2160p.HDR.TrueHD.Atmos.7.1.HEVC.DDR.mkv
+  KEEP:           Movies/General/Frozen II (2019)/Frozen II (2019) Unknown.mkv
+
+  DEL (19.4GB): Movies/Kids/Home Alone 1990 UHD 4K BluRay 2160p DoVi HDR DTS-HD MA 5.1 H.265-MgB/Home Alone 1990 UHD 4K BluRay 2160p DoVi HDR DTS-HD MA 5.1 H.265-MgB.mkv
+  KEEP:           Movies/General/Home Alone (1990)/Home Alone (1990) Bluray-2160p.mkv
+
+  DEL (18.9GB): Movies/General/The Accountant 2016/emd-theaccountant.2160p.mkv
+  KEEP:           Movies/General/The Accountant (2016)/The Accountant (2016) Bluray-2160p.mkv
+
+  DEL (18.7GB): Movies/General/Searching 2018/Searching.2018.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-FGT.mkv
+  KEEP:           Movies/General/Searching (2018)/Searching (2018) Remux-1080p.mkv
+
+  DEL (18.2GB): Movies/General/Glass 2019/Glass 2019.UHD.BluRay.2160p.HDR.HEVC.Atmos.7.1-DDR.mkv
+  KEEP:           Movies/General/Glass (2019)/Glass (2019) Unknown.mkv
+
+  DEL (18.0GB): Movies/General/No Hard Feelings 2023/No.Hard.Feelings.2023.2160p.WEB-DL.DD5.1.DV.HDR10.H.265-CMRG.mkv
+  KEEP:           Movies/General/No Hard Feelings (2023)/No Hard Feelings (2023) WEBDL-2160p.mkv
+
+  DEL (17.5GB): Movies/General/Pitch Perfect 2 2015/Pitch.Perfect.2.2015.2160p.UHD.BluRay.X265-IAMABLE.mkv
+  KEEP:           Movies/General/Pitch Perfect 2 (2015)/Pitch Perfect 2 (2015) Bluray-2160p.mkv
+
+  DEL (17.2GB): Movies/General/Joker 2019/Joker.2019.2160p.UHD.Bluray.HDR.TrueHD.Atmos.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Joker (2019)/Joker (2019) Unknown.mkv
+
+  DEL (16.9GB): Movies/General/Its a Wonderful Life 1946 MULTi/Its a WonderfulLife 1946.MULTi.UHD.Blu-ray.2160p.HDR.TrueHD.2.0.HEVC-DDR.mkv
+  KEEP:           Movies/General/It's a Wonderful Life (1946)/It's a Wonderful Life (1946) Unknown.mkv
+
+  DEL (16.7GB): Movies/Kids/Up 2009.MULTi.UHD.BluRay.2160p.HDR.TrueHD.Atmos.7.1.HEVC.DDR/Up.2009.MULTi.UHD.BluRay.2160p.HDR.TrueHD.Atmos.7.1.HEVC.DDR.mkv
+  KEEP:           Movies/Kids/Up (2009)/Up (2009) Unknown.mkv
+
+  DEL (16.7GB): Movies/General/Inside Out 2015 MULTi/Inside Out 2015.MULTi.UHD.Blu-ray.2160p.HDR.Atmos.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Inside Out (2015)/Inside Out (2015) Unknown.mkv
+
+  DEL (16.6GB): Movies/General/Get Out 2017 MULTi/Get.Out.2017.MULTi.UHD.Blu-ray.2160p.HDR.DTS-HDMA.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Get Out (2017)/Get Out (2017) Unknown.mkv
+
+  DEL (16.5GB): Movies/General/Guillermo del Toros Pinocchio 2022 4K HDR DV/Guillermo.del.Toros.Pinocchio.2022.4K.HDR.DV.2160p.WEBDL Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/Guillermo del Toro's Pinocchio (2022)/Guillermo del Toro's Pinocchio (2022) WEBDL-2160p.mkv
+
+  DEL (16.5GB): Movies/General/Equilibrium 2002/Movie and Sample/Equilibrium Open Matte.mkv
+  KEEP:           Movies/General/Equilibrium (2002)/Equilibrium (2002) HDTV-2160p.mkv
+
+  DEL (16.5GB): Movies/Kids/Frozen.2013.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR/Frozen.2013.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Frozen (2013)/Frozen (2013) Unknown.mkv
+
+  DEL (16.3GB): Movies/Kids/Finding Nemo 2003.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR/Finding Nemo 2003.MULTi.UHD.BluRay.2160p.TrueHD.Atmos.7.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/Finding Nemo (2003)/Finding Nemo (2003) Unknown.mkv
+
+  DEL (16.0GB): Movies/General/Force Of Nature The Dry 2 2024/Force.Of.Nature.The.Dry.2.2024.1080P.BluRay.DTS.5.1.H264-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Force of Nature The Dry 2 (2024)/Force of Nature The Dry 2 (2024) Bluray-1080p.mkv
+
+  DEL (15.7GB): Movies/Kids/Wish.2023.2160p.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-FLUX[TGx]/Wish.2023.2160p.WEB-DL.DDP5.1.Atmos.DV.HDR.H.265-FLUX.mkv
+  KEEP:           Movies/Kids/Wish (2023)/Wish (2023) WEBDL-2160p.mkv
+
+  DEL (15.7GB): Movies/General/Maze Runner The Scorch Trials 2015 RERIP/Maze.Runner.The.Scorch.Trials.2015.RERIP.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+  KEEP:           Movies/General/Maze Runner The Scorch Trials (2015)/Maze Runner The Scorch Trials (2015) Bluray-2160p Proper.mkv
+
+  DEL (15.7GB): Movies/General/The Second Best Exotic Marigold Hotel 2015 Bluray/The.Second.Best.Exotic.Marigold.Hotel.2015.Bluray.1080p-Grym.mkv
+  KEEP:           Movies/General/The Second Best Exotic Marigold Hotel (2015)/The Second Best Exotic Marigold Hotel (2015) Bluray-1080p.mkv
+
+  DEL (15.5GB): Movies/Kids/The Wizard of Oz 1939.MULTi.UHD.Blu-ray.2160p.HDR.DTS-HDMA.5.1.HEVC-DDR/The Wizard of Oz1939.MULTi.UHD.Blu-ray.2160p.HDR.DTS-HDMA.5.1.HEVC-DDR.mkv
+  KEEP:           Movies/General/The Wizard of Oz (1939)/The Wizard of Oz (1939) Unknown.mkv
+
+  DEL (15.5GB): Movies/General/The Dark Knight Rises (2012)/The Dark Knight Rises (2012) WEBDL-1080p.mkv
+  KEEP:           Movies/General/The Dark Knight Rises (2012) [1080p] [HDR] [5 1, 5 1] [ger, ger]/The Dark Knight Rises (2012) [1080p] [HDR] [5.1, 5.1] [ger, ger] [Vio].mkv
+
+  DEL (15.2GB): Movies/General/Joy 2015 Bluray/Joy.2015.Bluray.1080p.DTS-HD.x264-Grym.mkv
+  KEEP:           Movies/General/Joy (2015)/Joy (2015) Bluray-1080p.mkv
+
+  DEL (14.9GB): Movies/Kids/Finding.Dory.2016.2160p.UHD.BluRay.x265-TERMiNAL/finding.dory.2016.2160p.uhd.bluray.x265-terminal.mkv
+  KEEP:           Movies/General/Finding Dory (2016)/Finding Dory (2016) Bluray-2160p.mkv
+
+  DEL (14.9GB): Movies/Kids/Who.Framed.Roger.Rabbit.1988.2160p.DSNP.WEBRip.x265.10bit.HDR.DTS-HD.MA.5.1-TrollUHD/Who Framed Roger Rabbit (1988) 2160p HDR Disney WEBRip DTS-HD MA 5.1 x265-TrollUHD.mkv
+  KEEP:           Movies/General/Who Framed Roger Rabbit (1988)/Who Framed Roger Rabbit (1988) WEBRip-2160p.mkv
+
+  DEL (14.8GB): Movies/Kids/Leo.2023.2160p.NF.WEB-DL.MULTi.DD+5.1.Atmos.DV-HDR.H.265-TheBiscuitMan.mkv
+  KEEP:           Movies/General/The Inventor (2023)/The Inventor (2023) WEBDL-2160p.mkv
+
+  DEL (14.2GB): Comedy/Tim.Minchin.and.The.Heritage.Orchestra.Live.At.The.Royal.Albert.Hall.2011.1080p.WEBRip.DD2.0.x264-monkee/Tim.Minchin.and.The.Heritage.Orchestra.Live.At.The.Royal.Albert.Hall.2011.1080p.WEBRip.DD2.0.x264-monkee.mkv
+  KEEP:           Movies/General/Tim Minchin and the Heritage Orchestra Live at the Royal Albert Hall (2011)/Tim Minchin and the Heritage Orchestra Live at the Royal Albert Hall (2011) WEBRip-1080p.mkv
+
+  DEL (14.2GB): Movies/General/Tim Minchin and The Heritage Orchestra Live At The Royal Albert Hall 2011/Tim.Minchin.and.The.Heritage.Orchestra.Live.At.The.Royal.Albert.Hall.2011.1080p.WEBRip.DD2.0.x264-monkee.mkv
+  KEEP:           Movies/General/Tim Minchin and the Heritage Orchestra Live at the Royal Albert Hall (2011)/Tim Minchin and the Heritage Orchestra Live at the Royal Albert Hall (2011) WEBRip-1080p.mkv
+
+  DEL (14.1GB): Movies/Kids/Coco.2017.2160p.UHD.BluRay.x265-WhiteRhino/Coco.2017.2160p.UHD.BluRay.x265-WhiteRhino.mkv
+  KEEP:           Movies/Kids/Coco (2017)/Coco (2017) Bluray-2160p.mkv
+
+  DEL (13.8GB): Movies/General/The Shallows 2016/The.Shallows.2016.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+  KEEP:           Movies/General/The Shallows (2016)/The Shallows (2016) Bluray-2160p.mkv
+
+  DEL (13.8GB): Movies/General/The Kings Man 2021/The.Kings.Man.2021.2160p.WEB-DL.DDP5.1.Atmos.HDR.H.265-EVO.mkv
+  KEEP:           Movies/General/The King's Man (2021)/The King's Man (2021) WEBDL-2160p.mkv
+
+  DEL (13.7GB): Movies/General/High-Rise 2015 Bluray/High-Rise.2015.Bluray.1080p.DTS-HD.x264-Grym.mkv
+  KEEP:           Movies/General/High-Rise (2015)/High-Rise (2015) Bluray-1080p.mkv
+
+  DEL (13.2GB): Movies/Kids/Peter.Rabbit.2018.2160p.UHD.BluRay.x265-WhiteRhino/Peter.Rabbit.2018.2160p.UHD.BluRay.x265-WhiteRhino.mkv
+  KEEP:           Movies/General/Peter Rabbit (2018)/Peter Rabbit (2018) Bluray-2160p.mkv
+
+  DEL (12.8GB): Movies/Kids/Maleficent.2014.2160p.UHD.BluRay.x265-TERMiNAL/Maleficent.2014.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+  KEEP:           Movies/General/Maleficent (2014)/Maleficent (2014) Bluray-2160p.mkv
+
+  DEL (12.5GB): Movies/Kids/Beauty.and.the.Beast.1991.2160p.UHD.BluRay.x265-AViATOR/beauty.and.the.beast.1991.2160p.uhd.bluray.x265-aviator.mkv
+  KEEP:           Movies/Kids/Beauty and the Beast (1991)/Beauty and the Beast (1991) Bluray-2160p.mkv
+
+  DEL (12.5GB): Movies/General/Jacobs Ladder 1990 Bluray/Jacobs.Ladder.1990.Bluray.1080p.DTS-HD.x264-Grym.mkv
+  KEEP:           Movies/General/Jacob's Ladder (1990)/Jacob's Ladder (1990) Bluray-1080p.mkv
+
+  DEL (12.3GB): Movies/General/Going in Style 2017 Bluray/Going.in.Style.2017.Bluray.1080p.DTS-HD.x264-Grym.mkv
+  KEEP:           Movies/General/Going in Style (2017)/Going in Style (2017) Bluray-1080p.mkv
+
+  DEL (11.9GB): Movies/Kids/Aladdin 1992.MULTi.UHD.Blu-Ray.2160p.Atmos.7.1.HEVC-DDR[EtHD]/Aladdin 1992.MULTi.UHD.Blu-Ray.2160p.Atmos.7.1.HEVC-DDR[EtHD].mkv
+  KEEP:           Movies/Kids/Aladdin (1992)/Aladdin (1992) Unknown.mkv
+
+  DEL (11.8GB): Movies/Kids/Monsters.Inc.2001.2160p.UHD.BluRay.x265-AViATOR/monsters.inc.2001.2160p.uhd.bluray.x265-aviator.mkv
+  KEEP:           Movies/General/Monsters, Inc. (2001)/Monsters, Inc. (2001) Bluray-2160p.mkv
+
+  DEL (11.8GB): Movies/General/First Man 2018 BDRip/Movie and Sample/First Man.mkv
+  KEEP:           Movies/General/First Man (2018)/First Man (2018) Bluray-2160p.mkv
+
+  DEL (11.6GB): Movies/Kids/Tangled.2010.2160p.UHD.BluRay.x265-TERMiNAL/Tangled.2010.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+  KEEP:           Movies/Kids/Tangled (2010)/Tangled (2010) Bluray-2160p.mkv
+
+  DEL (11.0GB): Movies/Kids/Sausage.Party.2016.2160p.UHD.BluRay.X265-IAMABLE/Sausage.Party.2016.2160p.UHD.BluRay.X265-IAMABLE.mkv
+  KEEP:           Movies/General/Sausage Party (2016)/Sausage Party (2016) Bluray-2160p.mkv
+
+  DEL (10.3GB): Movies/Kids/Big.Hero.6.2014.2160p.UHD.BluRay.x265-TERMiNAL/big.hero.6.2014.2160p.uhd.bluray.x265-terminal.mkv
+  KEEP:           Movies/Kids/Big Hero 6 (2014)/Big Hero 6 (2014) Bluray-2160p.mkv
+
+  DEL (9.9GB): Movies/General/Poker Face 2022/Poker.Face.2022.2160p.WEB-DL.x265.10bit.HDR.DDP5.1-NOGRP.mkv
+  KEEP:           Movies/General/Poker Face (2022)/Poker Face (2022) WEBDL-2160p.mkv
+
+  DEL (9.8GB): Movies/General/Richard Jewell 2019/richard.jewell.2019.1080p.bluray.x264-geckos.mkv
+  KEEP:           Movies/General/Richard Jewell (2019)/Richard Jewell (2019) Bluray-1080p.mkv
+
+  DEL (9.7GB): Movies/General/The Hustle 2019/The.Hustle.2019.2160p.WEBRip.SDR.DTS-HD.MA.7.1HEVC-DDR[EtHD].mkv
+  KEEP:           Movies/General/The Hustle (2019)/The Hustle (2019) WEBRip-2160p.mkv
+
+  DEL (9.7GB): Movies/Kids/Peter.Rabbit.2.The.Runaway.2021.2160p.WEB-DL.x265.10bit.HDR.DDP5.1.Atmos-CM/Peter.Rabbit.2.The.Runaway.2021.2160p.WEB-DL.x265.10bit.HDR.DDP5.1.Atmos-CM.mkv
+  KEEP:           Movies/General/Peter Rabbit 2 The Runaway (2021)/Peter Rabbit 2 The Runaway (2021) WEBDL-2160p.mkv
+
+  DEL (9.4GB): Movies/Kids/How.to.Train.Your.Dragon.2010.2160p.UHD.BluRay.X265-IAMABLE/How.to.Train.Your.Dragon.2010.2160p.UHD.BluRay.X265-IAMABLE.mkv
+  KEEP:           Movies/General/How to Train Your Dragon (2010)/How to Train Your Dragon (2010) Bluray-2160p.mkv
+
+  DEL (9.1GB): Movies/General/San Andreas (2015)/San Andreas (2015) Unknown.mkv
+  KEEP:           Movies/General/San Andreas (2015)/San Andreas (2015) 2160p [4K] SDR BluRay (Hindi-5.1)(Eng-5.1) 10bit HEVC - PeruGuy/San Andreas (2015) 2160p [4K] SDR BluRay (Hindi-5.1)(Eng-5.1) 10bit HEVC - PeruGuy.mkv
+
+  DEL (8.9GB): Movies/General/I Feel Pretty 2018/I.Feel.Pretty.2018.1080p.BluRay.DTS.X264-CMRG[EtHD].mkv
+  KEEP:           Movies/General/I Feel Pretty (2018)/I Feel Pretty (2018) Bluray-1080p.mkv
+
+  DEL (8.8GB): Movies/Kids/Hercules.1997.1080p.BluRay.ENG.LATINO.ITALIAN.DD5.1.H264-BEN.THE.MEN/Hercules.1997.1080p.BluRay.ENG.LATINO.ITALIAN.DD5.1.H264-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Hercules (1997)/Hercules (1997) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/General/Terminator Genisys 2015/Terminator.Genisys.2015.1080p.BluRay.x264-SPARKS.mkv
+  KEEP:           Movies/General/Terminator Genisys (2015)/Terminator Genisys (2015) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/General/Dolphin Tale 2011/Dolphin.Tale.2011.1080p.BluRay.x264-REFiNED.mkv
+  KEEP:           Movies/General/Dolphin Tale (2011)/Dolphin Tale (2011) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/Kids/Dolphin.Tale.2011.1080p.BluRay.x264-REFiNED/Dolphin.Tale.2011.1080p.BluRay.x264-REFiNED.mkv
+  KEEP:           Movies/General/Dolphin Tale (2011)/Dolphin Tale (2011) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/General/High Life 2018/High.Life.2018.1080p.BluRay.X264-AMIABLE[EtHD].mkv
+  KEEP:           Movies/General/High Life (2018)/High Life (2018) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/General/Trainwreck 2015 UNRATED/rep-trainwreck1080.mkv
+  KEEP:           Movies/General/Trainwreck (2015)/Trainwreck (2015) Bluray-1080p.mkv
+
+  DEL (8.7GB): Movies/Kids/Early.Man.2018.2160p.UHD.BluRay.X265-IAMABLE/Early.Man.2018.2160p.UHD.BluRay.X265-IAMABLE.mkv
+  KEEP:           Movies/Kids/Early Man (2018)/Early Man (2018) Bluray-2160p.mkv
+
+  DEL (8.6GB): Movies/General/Long Shot 2019/Long.Shot.2019.2160p.WEB-Rip.HDR.DDP.5.1.HEVC-DDR[EtHD].mkv
+  KEEP:           Movies/General/Long Shot (2019)/Long Shot (2019) WEBDL-2160p.mkv
+
+  DEL (8.3GB): Movies/General/Strange Days 1995 20th Anniversary/Strange.Days.1995.20th.Anniversary.1080p.BluRay.x265.HEVC.EAC3-SARTRE.mkv
+  KEEP:           Movies/General/Strange Days (1995)/Strange Days (1995) Bluray-1080p.mkv
+
+  DEL (8.2GB): Movies/General/The Tax Collector 2020/The.Tax.Collector.2020.1080p.BluRay.DTS-HD.X264-CMRG.mkv
+  KEEP:           Movies/General/The Tax Collector (2020)/The Tax Collector (2020) Bluray-1080p.mkv
+
+  DEL (8.1GB): Movies/General/Insurgent 2015 BluRay/Insurgent 2015 BluRay 1080p AVC DTS-HD MA 7.1 x264-ETRG.mkv
+  KEEP:           Movies/General/Insurgent (2015)/Insurgent (2015) BR-DISK.mkv
+
+  DEL (8.0GB): Movies/Kids/Cinderella 2015 BluRay 1080p AVC DTS-HD MA 7.1 x264-ETRG/Cinderella 2015 BluRay 1080p AVC DTS-HD MA 7.1 x264-ETRG.mkv
+  KEEP:           Movies/Kids/Cinderella (2015)/Cinderella (2015) BR-DISK.mkv
+
+  DEL (7.9GB): Movies/General/Last Days in Vietnam 2014 EXTENDED CUT/Last.Days.in.Vietnam.2014.EXTENDED.CUT.1080p.BluRay.x264-SADPANDA.mkv
+  KEEP:           Movies/General/Last Days in Vietnam (2014)/Last Days in Vietnam (2014) Bluray-1080p.mkv
+
+  DEL (7.9GB): Movies/General/Yesterday 2019/yesterday.2019.2160p.uhd.bluray.x265-terminal.mkv
+  KEEP:           Movies/General/Yesterday (2019)/Yesterday (2019) Bluray-2160p.mkv
+
+  DEL (7.6GB): Movies/General/Muriels Wedding 1994/Muriels.Wedding.1994.1080p.BluRay.X264-AMIABLE.mkv
+  KEEP:           Movies/General/Muriel's Wedding (1994)/Muriel's Wedding (1994) Bluray-1080p.mkv
+
+  DEL (7.6GB): Movies/General/Three Identical Strangers 2018/three.identical.strangers.2018.1080p.bluray.x264-rovers.mkv
+  KEEP:           Movies/General/Three Identical Strangers (2018)/Three Identical Strangers (2018) Bluray-1080p.mkv
+
+  DEL (7.6GB): Movies/General/Get Hard 2015 UNRATED/Get.Hard.2015.1080p.BluRay.x264-SPARKS.mkv
+  KEEP:           Movies/General/Get Hard (2015)/Get Hard (2015) Bluray-1080p.mkv
+
+  DEL (7.6GB): Movies/General/Fighting with My Family 2019/Fighting.with.My.Family.2019.1080p.BluRay.x264-GECKOS.mkv
+  KEEP:           Movies/General/Fighting with My Family (2019)/Fighting with My Family (2019) Bluray-1080p.mkv
+
+  DEL (7.6GB): Movies/Kids/Isle.of.Dogs.2018.1080p.BluRay.x264-DRONES[EtHD]/Isle.of.Dogs.2018.1080p.BluRay.x264-DRONES[EtHD].mkv
+  KEEP:           Movies/General/Isle of Dogs (2018)/Isle of Dogs (2018) Bluray-1080p.mkv
+
+  DEL (7.1GB): Movies/General/Rocketman 2019 4K HDR/Rocketman.2019.4K.HDR.2160p.BDRip Ita Eng x265-NAHOM.mkv
+  KEEP:           Movies/General/Rocketman (2019)/Rocketman (2019) Bluray-2160p.mkv
+
+  DEL (7.0GB): Movies/Kids/Despicable.Me.2010.1080p.BluRay.ENG.LATINO.DTS.5.1.H264-BEN.THE.MEN/Despicable.Me.2010.1080p.BluRay.ENG.LATINO.DTS.5.1.H264-BEN.THE.MEN.mkv
+  KEEP:           Movies/General/Despicable Me (2010)/Despicable Me (2010) Bluray-1080p.mkv
+
+  DEL (6.8GB): Movies/General/Fight Club (1999)/Fight Club (1999)  [2160p x265 10bit Joy]/Fight Club (1999)  [2160p x265 10bit FS100 Joy]-Copy(1).mkv
+  KEEP:           Movies/General/Fight Club (1999)/Fight Club (1999)  [2160p x265 10bit Joy]/Fight Club (1999)  [2160p x265 10bit FS100 Joy].mkv
+
+  DEL (6.8GB): Movies/Kids/The.Secret.Life.of.Pets.2.2019.2160p.UHD.BluRay.x265-TERMiNAL/the.secret.life.of.pets.2.2019.2160p.uhd.bluray.x265-terminal.mkv
+  KEEP:           Movies/Kids/The Secret Life of Pets 2 (2019)/The Secret Life of Pets 2 (2019) Bluray-2160p.mkv
+
+  DEL (6.8GB): Movies/General/The Inventor Out for Blood in Silicon Valley 2019/The.Inventor.Out.for.Blood.in.Silicon.Valley.2019.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTG[EtHD].mkv
+  KEEP:           Movies/General/The Inventor Out for Blood in Silicon Valley (2019)/The Inventor Out for Blood in Silicon Valley (2019) WEBDL-1080p.mkv
+
+  DEL (6.6GB): Movies/General/Dolemite Is My Name 2019/Dolemite.Is.My.Name.2019.1080p.NF.WEB-DL.DDP5.1.x264-NTG.mkv
+  KEEP:           Movies/General/Dolemite Is My Name (2019)/Dolemite Is My Name (2019) WEBDL-1080p.mkv
+
+  DEL (6.6GB): Movies/General/Tully 2018/tully.2018.1080p.bluray.x264-drones[EtHD].mkv
+  KEEP:           Movies/General/Tully (2018)/Tully (2018) Bluray-1080p.mkv
+
+  DEL (6.6GB): Movies/Kids/Enchanted.2007.1080p.PROPER.BluRay.x264-MOOVEE[rarbg]/enchanted.2007.1080p.proper.bluray.x264-moovee.mkv
+  KEEP:           Movies/Kids/Enchanted (2007)/Enchanted (2007) Bluray-1080p Proper.mkv
+
+  DEL (6.5GB): Movies/General/The Andromeda Strain (1971)/The Andromeda Strain (1971) Bluray-1080p.mkv
+  KEEP:           Movies/General/The Andromeda Strain (1971) RM4K (1080p BluRay x265 HEVC 10bit AAC 1 0 Tigole)/The Andromeda Strain (1971) RM4K (1080p BluRay x265 10bit Tigole).mkv
+
+  DEL (6.4GB): Movies/General/Explorer The Last Tepui 2022/Explorer.The.Last.Tepui.2022.2160p.WEB-DL.DDP5.1.DV.MP4.x265-DVSUX/Explorer.The.Last.Tepui.2022.2160p.WEB-DL.DDP5.1.DV.MP4.x265-DVSUX.mp4
+  KEEP:           Movies/General/Explorer The Last Tepui (2022)/Explorer The Last Tepui (2022) WEBDL-2160p.mp4
+
+  DEL (6.0GB): Movies/General/Bridge of Spies (2015)/Bridge of Spies (2015) Bluray-1080p.mkv
+  KEEP:           Movies/General/Bridge of Spies (2015) (1080p BluRay x265 HEVC 10bit AAC 7 1 Silence)/Bridge of Spies (2015) (1080p BluRay x265 Silence).mkv
+
+  DEL (5.9GB): Movies/General/www Torrenting com   -    Creed III 2023/Creed.III.2023.720p.BluRay.DD5.1.x264-FuzerHD/Creed.III.2023.720p.BluRay.DD5.1.x264-FuzerHD.mkv
+  KEEP:           Movies/General/Creed III (2023)/Creed III (2023) Bluray-720p.mkv
+
+  DEL (5.8GB): Movies/General/The Meg 2018/The.Meg.2018..UHD.2160p.Bluray.x265.HDR.DD.5.1[EN+Hin)-DTOne.mkv
+  KEEP:           Movies/General/The Meg (2018)/The Meg (2018) Bluray-2160p.mkv
+
+  DEL (5.8GB): Movies/Kids/The.Boy.the.Mole.the.Fox.and.the.Horse.2022.2160p.ATVP.WEB-DL.x265.10bit.HDR.DDP5.1.Atmos-NAISU/the.boy.the.mole.the.fox.and.the.horse.2022.hdr.2160p.web.h265-naisu.mkv
+  KEEP:           Movies/General/The Boy, the Mole, the Fox and the Horse (2022)/The.Boy.the.Mole.the.Fox.and.the.Horse.2022.2160p.ATVP.WEB-DL.x265.10bit.HDR.DDP5.1.Atmos-NAISU.mkv
+
+  DEL (5.7GB): Movies/General/Lost in London 2017/Lost.in.London.2017.1080p.PCOK.WEB-DL.DDP.5.1.H.264-PiRaTeS.mkv
+  KEEP:           Movies/General/Lost in London (2017)/Lost in London (2017) WEBDL-1080p.mkv
+
+  DEL (5.5GB): Movies/Kids/Smallfoot.2018.1080p.BluRay.x264-DRONES[EtHD]/smallfoot.2018.1080p.bluray.x264-drones[EtHD].mkv
+  KEEP:           Movies/General/Smallfoot (2018)/Smallfoot (2018) Bluray-1080p.mkv
+
+  DEL (5.2GB): Movies/Kids/LEGO.Star.Wars.Terrifying.Tales.2021.HDR.2160p.WEB.h265-KOGi/LEGO.Star.Wars.Terrifying.Tales.2021.HDR.2160p.WEB.h265-KOGi.mkv
+  KEEP:           Movies/General/LEGO Star Wars Terrifying Tales (2021)/LEGO Star Wars Terrifying Tales (2021) WEBDL-2160p.mkv
+
+  DEL (5.0GB): Movies/General/Explorer (2022) [2160p] [4K] [WEB] [5 1]/Explorer.2022.2160p.4K.WEB.x265.10bit.AAC5.1-[YTS.MX]-Copy(1).mkv
+  KEEP:           Movies/General/Explorer (2022) [2160p] [4K] [WEB] [5 1]/Explorer.2022.2160p.4K.WEB.x265.10bit.AAC5.1-[YTS.MX].mkv
+
+PRIORITY 3 — <5GB files (146 files, 269GB)
+--------------------------------------------------------------------------------
+  DEL (5.0GB): Movies/General/Rescue Dawn (2006)/Rescue Dawn (2006) Bluray-1080p Proper.mkv
+  KEEP:           Movies/General/Rescue Dawn (2006) REPACK (1080p BluRay x265 HEVC 10bit AAC 5 1 Tigole)/Rescue Dawn (2006) (1080p BluRay x265 10bit Tigole).mkv
+
+  DEL (4.9GB): Movies/Kids/Penguins.2019.1080p.AMZN.WEB-DL.DDP5.1.H.264-NDy[EtHD]/Penguins.2019.1080p.AMZN.WEB-DL.DDP5.1.H.264-NDy[EtHD].mkv
+  KEEP:           Movies/General/Penguins (2019)/Penguins (2019) WEBDL-1080p.mkv
+
+  DEL (4.7GB): Movies/Kids/Gods.Not.Dead.2.2016.1080p.BluRay.DTS.x264-ETRG/Gods.Not.Dead.2.2016.1080p.BluRay.DTS.x264-ETRG.mkv
+  KEEP:           Movies/General/God's Not Dead 2 (2016)/God's Not Dead 2 (2016) Bluray-1080p.mkv
+
+  DEL (4.7GB): Movies/General/Goldstone 2016/Goldstone.2016.1080p.BluRay.x265.HEVC.EAC3-SARTRE.mkv
+  KEEP:           Movies/General/Goldstone (2016)/Goldstone (2016) Bluray-1080p.mkv
+
+  DEL (4.5GB): Movies/Kids/www.Torrenting.com   -    The Little Mermaid 1989 720p BluRay DTS x264-FuzerHD/The.Little.Mermaid.1989.720p.BluRay.DTS.x264-FuzerHD/The.Little.Mermaid.1989.720p.BluRay.DTS.x264-FuzerHD.mkv
+  KEEP:           Movies/General/The Little Mermaid (1989)/The Little Mermaid (1989) Bluray-720p.mkv
+
+  DEL (4.4GB): Movies/Kids/Zombies.2.2020.1080p.DSNP.WEB-DL.DDP.5.1.H.264-PiRaTeS[TGx]/Zombies.2.2020.1080p.DSNP.WEB-DL.DDP.5.1.H.264-PiRaTeS.mkv
+  KEEP:           Movies/General/Z-O-M-B-I-E-S 2 (2020)/Z-O-M-B-I-E-S 2 (2020) WEBDL-1080p.mkv
+
+  DEL (4.4GB): Movies/General/The Laundromat 2019/The.Laundromat.2019.1080p.NF.WEB-DL.DDP5.1.H264-CMRG[EtHD].mkv
+  KEEP:           Movies/General/The Laundromat (2019)/The Laundromat (2019) WEBDL-1080p.mkv
+
+  DEL (4.3GB): Movies/General/www Torrenting com   -    Tim Minchin Back 2022/Tim.Minchin.Back.2022.720p.BluRay.x264-MiNCHiN.mkv
+  KEEP:           Movies/General/Tim Minchin Back (2022)/Tim Minchin Back (2022) Bluray-720p.mkv
+
+  DEL (4.3GB): Movies/General/The Green Mile 1999/The.Green.Mile.1999.2160p.BluRay.3999MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/The Green Mile (1999)/The Green Mile (1999) Bluray-2160p.mkv
+
+  DEL (4.1GB): TV/General/Constellation/Constellation S01E02 Live And Let Die 1080p ATVP WEB-DL DDP5 1 H 264-NTb[TGx]/Constellation S01E02 Live And Let Die 1080p ATVP WEB-DL DDP5 1 H 264-NTb.mkv
+  KEEP:           TV/General/Constellation/Season 01/Constellation - S01E02 - Live And Let Die.mkv
+
+  DEL (4.1GB): Movies/General/Shooter 2007/Shooter.2007.1080p.PMTP.WEB-DL.DDP.5.1.H.264-PiRaTeS.mkv
+  KEEP:           Movies/General/Shooter (2007)/Shooter (2007) WEBDL-1080p.mkv
+
+  DEL (4.0GB): Movies/General/Repo Man 1984 Criterion/Repo.Man.1984.Criterion.1080p.BluRay.H265.HEVC.10bit.AAC.mkv
+  KEEP:           Movies/General/Repo Man (1984)/Repo Man (1984) Bluray-1080p.mkv
+
+  DEL (3.9GB): Movies/General/My Big Fat Greek Wedding 2 2016/My.Big.Fat.Greek.Wedding.2.2016.1080p.BluRay.DTS.x264-ETRG.mkv
+  KEEP:           Movies/General/My Big Fat Greek Wedding 2 (2016)/My Big Fat Greek Wedding 2 (2016) Bluray-1080p.mkv
+
+  DEL (3.9GB): Movies/General/The Godfather Part II 1974/The.Godfather.Part.II.1974.1080p.BluRay.H264.AAC-RARBG.mp4
+  KEEP:           Movies/General/The Godfather Part II (1974)/The Godfather Part II (1974) Bluray-1080p.mp4
+
+  DEL (3.8GB): Movies/General/Downton Abbey 2019/Downton.Abbey.2019.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Downton Abbey (2019)/Downton Abbey (2019) Bluray-2160p.mkv
+
+  DEL (3.6GB): Movies/Kids/Back.to.the.Outback.2021.1080p.NF.WEB-DL.x265.10bit.SDR.DDP5.1.Atmos-CM/Back.to.the.Outback.2021.1080p.NF.WEB-DL.x265.10bit.SDR.DDP5.1.Atmos-CM.mkv
+  KEEP:           Movies/General/Back to the Outback (2021)/Back to the Outback (2021) WEBDL-1080p.mkv
+
+  DEL (3.5GB): Movies/General/Okja 2017/Okja.2017.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Okja (2017)/Okja (2017) Bluray-2160p.mkv
+
+  DEL (3.5GB): Movies/General/Rollerball 1975/Rollerball.1975.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Rollerball (1975)/Rollerball (1975) Bluray-2160p.mkv
+
+  DEL (3.5GB): Movies/Kids/Harry Potter And The Philosophers Stone 2001 BRRip 1080p x264 AAC - honchorella (Kingdom Release)/Harry Potter And The Philosophers Stone.mp4
+  KEEP:           Movies/General/Harry Potter and the Philosopher's Stone (2001)/Harry Potter and the Philosopher's Stone (2001) Bluray-1080p.mp4
+
+  DEL (3.5GB): Movies/General/The Midnight Sky 2020/The.Midnight.Sky.2020.2160p.NF.WEBRip.3500MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/The Midnight Sky (2020)/The Midnight Sky (2020) WEBRip-2160p.mkv
+
+  DEL (3.5GB): Movies/General/Black Mass 2015/Black.Mass.2015.2160p.WEBRip.3500MB.DDP5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Black Mass (2015)/Black Mass (2015) WEBRip-2160p.mkv
+
+  DEL (3.5GB): TV/General/The Last of Us/The.Last.of.Us.S01E07.1080p.WEB.H264-CAKES[rarbg]/the.last.of.us.s01e07.1080p.web.h264-cakes.mkv
+  KEEP:           TV/General/The Last of Us/Season 01/The Last of Us - S01E07.mkv
+
+  DEL (3.4GB): Movies/General/The Creator 2023/The.Creator.2023.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265.mkv
+  KEEP:           Movies/General/The Creator (2023)/The Creator (2023) Bluray-1080p.mkv
+
+  DEL (3.3GB): Movies/General/The Big Short 2015/The Big Short 2015 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/The Big Short (2015)/The Big Short (2015) Bluray-1080p.mkv
+
+  DEL (3.3GB): Movies/General/Tomorrowland 2015/Tomorrowland 2015 1080p BRRip x264 DTS-JYK.mkv
+  KEEP:           Movies/General/Tomorrowland (2015)/Tomorrowland (2015) Bluray-1080p.mkv
+
+  DEL (3.2GB): Movies/General/Toy Story 3 (2010)/Toy Story 3 (2010) HDTV-1080p.mp4
+  KEEP:           Movies/General/Prica o Igrackama 3 (2010)/Priča o Igračkama 3 - Toy Story 3 (2010).mp4
+
+  DEL (3.1GB): Movies/Kids/The Son of Bigfoot.2017.1080p.WEB-DL.H264.AC3-EVO[EtHD]/The Son of Bigfoot.2017.1080p.WEB-DL.H264.AC3-EVO[EtHD].mkv
+  KEEP:           Movies/General/The Son of Bigfoot (2017)/The Son of Bigfoot (2017) WEBDL-1080p.mkv
+
+  DEL (3.1GB): Movies/Kids/Pinocchio.1940.1080p.BluRay.DDP.7.1.x265-EDGE2020.mkv
+  KEEP:           Movies/General/Pinocchio (1940)/Pinocchio (1940) Bluray-1080p.mkv
+
+  DEL (3.0GB): Movies/General/Frequency 2000/Frequency.2000.1080p.BluRay.H264.AC3.DD5.1.Will1869.mp4
+  KEEP:           Movies/General/Frequency (2000)/Frequency (2000) Bluray-1080p.mp4
+
+  DEL (3.0GB): Movies/General/The Dressmaker 2015/The Dressmaker 2015 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/The Dressmaker (2015)/The Dressmaker (2015) Bluray-1080p.mkv
+
+  DEL (2.9GB): Movies/General/The Impossible 2012/The Impossible 2012 1080p BRRip x264 AC3-JYK.mkv
+  KEEP:           Movies/General/The Impossible (2012)/The Impossible (2012) Bluray-1080p.mkv
+
+  DEL (2.9GB): Movies/General/Triple 9 2016/Triple 9 2016 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/Triple 9 (2016)/Triple 9 (2016) Bluray-1080p.mkv
+
+  DEL (2.9GB): Movies/General/Ted 2 2015 UNCENSORED/Ted 2 2015 UNCENSORED 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/Ted 2 (2015)/Ted 2 (2015) Bluray-1080p.mkv
+
+  DEL (2.9GB): Movies/General/The Space Between Us (2017)/The Space Between Us (2017) Bluray-1080p.mkv
+  KEEP:           Movies/General/The Space Between Us (2017)/The Space Between Us (2017) 1080p BrRip x264 - VPPV/The.Space.Between.Us.2017.1080p.BluRay.x264.VPPV.mkv
+
+  DEL (2.8GB): Movies/General/The Girl with All the Gifts 2016/The.Girl.with.All.the.Gifts.2016.1080p.BluRay.x264.DTS-JYK.mkv
+  KEEP:           Movies/General/The Girl with All the Gifts (2016)/The Girl with All the Gifts (2016) Bluray-1080p.mkv
+
+  DEL (2.8GB): Movies/General/Scream 3 (2000)/Scream 3 (2000) Bluray-1080p.mp4
+  KEEP:           Movies/General/Scream 3 (2000) -/Scream.3.2000.1080p.BluRay.x264.VPPV.mp4
+
+  DEL (2.7GB): Movies/General/The Batman (2022)/The.Batman.2022.1080p.WEBRip.x265-RARBG-Copy(1).mp4
+  KEEP:           Movies/General/The Batman (2022)/The.Batman.2022.1080p.WEBRip.x265-RARBG.mp4
+
+  DEL (2.6GB): Movies/General/Obi-Wan Kenobi A Jedis Return (2022) [2160p] [4K] [WEB] [5 1]/Obi-Wan.Kenobi.A.Jedis.Return.2022.2160p.4K.WEB.x265.10bit.AAC5.1-[YTS.MX].mkv
+  KEEP:           Movies/General/Obi-Wan Kenobi A Jedi's Return (2022)/Obi-Wan Kenobi A Jedi's Return (2022) WEBDL-2160p.mkv
+
+  DEL (2.6GB): Movies/General/Scream 4 (2011)/Scream 4 (2011) Bluray-1080p.mp4
+  KEEP:           Movies/General/Scream 4 (2011) -/Scream.4.2011.1080p.BluRay.x264.VPPV.mp4
+
+  DEL (2.5GB): Movies/Kids/Hunt for the Wilderpeople 2016 1080p BluRay x264 DTS-JYK/Hunt for the Wilderpeople 2016 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/Hunt for the Wilderpeople (2016)/Hunt for the Wilderpeople (2016) Bluray-1080p.mkv
+
+  DEL (2.4GB): Movies/General/Irrational Man 2015/Irrational Man 2015 1080p BluRay x264 DTS-JYK.mkv
+  KEEP:           Movies/General/Irrational Man (2015)/Irrational Man (2015) Bluray-1080p.mkv
+
+  DEL (2.4GB): Movies/General/What We Do In The Shadows 2014/What.We.Do.In.The.Shadows.2014.1080p.BluRay.H264.AC3.5.1.BADASSMEDIA.mp4
+  KEEP:           Movies/General/What We Do in the Shadows (2014)/What We Do in the Shadows (2014) Bluray-1080p.mp4
+
+  DEL (2.4GB): TV/General/The Big Door Prize/The Big Door Prize S02E05 Night Under the Stars 1080p ATVP WEB-DL DDP5 1 H 264-NTb[TGx]/The Big Door Prize S02E05 Night Under the Stars 1080p ATVP WEB-DL DDP5 1 H 264-NTb.mkv
+  KEEP:           TV/General/The Big Door Prize/Season 02/The Big Door Prize - S02E05 - Night Under The Stars.mkv
+
+  DEL (2.3GB): TV/General/The Big Door Prize/The.Big.Door.Prize.S01E04.1080p.WEB.H264-GGWP[TGx]/the.big.door.prize.s01e04.1080p.web.h264-ggwp.mkv
+  KEEP:           TV/General/The Big Door Prize/Season 01/The Big Door Prize - S01E04.mkv
+
+  DEL (2.3GB): Movies/Kids/Despicable Me 3 (2017)/Despicable Me 3 (2017) WEBDL-1080p.mkv
+  KEEP:           Movies/Kids/Despicable Me 3 (2017) [1080p] [AV1-10bit Opus_5.1]/Despicable Me 3 (2017) [1080p] [AV1-10bit Opus_5.1].mkv
+
+  DEL (2.1GB): Movies/General/The Foreigner (2017)/The Foreigner (2017) [Jackie Chan] 1080p BluRay H264 DolbyD 5.1 + nickarad/The Foreigner (2017) 1080p BluRay H264 DolbyD 5.1 + nickarad.mp4
+  KEEP:           Movies/General/The Foreigner (2017)/The Foreigner (2017) Bluray-1080p.mp4
+
+  DEL (2.0GB): Movies/Kids/Cats.2019.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265[TGx]/Cats.2019.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265.mkv
+  KEEP:           Movies/Kids/Cats (2019)/Cats (2019) Bluray-1080p.mkv
+
+  DEL (2.0GB): Movies/General/www Torrenting com   -    American Psycho II All American Girl 2002/American.Psycho.II.All.American.Girl.2002.1080p.BluRay.H264.AC3.Will1869.mp4
+  KEEP:           Movies/General/American Psycho II All American Girl (2002)/American Psycho II All American Girl (2002) Bluray-1080p.mp4
+
+  DEL (2.0GB): Movies/Kids/Goodbye.Christopher.Robin.2017.1080p.10bit.BluRay.6CH.x265.HEVC-PSA/Goodbye.Christopher.Robin.2017.1080p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv
+  KEEP:           Movies/General/Goodbye Christopher Robin (2017)/Goodbye Christopher Robin (2017) Bluray-1080p.mkv
+
+  DEL (2.0GB): Movies/General/Heathers 1989/Heathers.1989.1080p.BluRay.H264.AAC-RARBG.mp4
+  KEEP:           Movies/General/Heathers (1989)/Heathers (1989) Bluray-1080p.mp4
+
+  DEL (1.9GB): Movies/General/McFarland, USA (2015)/McFarland, USA (2015) [1080p]/McFarland,.USA.2015.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/McFarland, USA (2015)/McFarland, USA (2015) Bluray-1080p.mp4
+
+  DEL (1.9GB): Movies/General/Planet of the Apes 1968/Planet.of.the.Apes.1968.1080p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv
+  KEEP:           Movies/General/Planet of the Apes (1968)/Planet of the Apes (1968) Bluray-1080p.mkv
+
+  DEL (1.9GB): Movies/General/McEnroe (2022) [1080p] [BluRay] [5 1]/McEnroe.2022.1080p.BluRay.x264.AAC5.1-[YTS.MX]-Copy(1).mp4
+  KEEP:           Movies/General/McEnroe (2022) [1080p] [BluRay] [5 1]/McEnroe.2022.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4
+
+  DEL (1.9GB): Movies/General/McEnroe (2022)/McEnroe (2022) Bluray-1080p.mp4
+  KEEP:           Movies/General/McEnroe (2022) [1080p] [BluRay] [5 1]/McEnroe.2022.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4
+
+  DEL (1.9GB): Movies/General/Mechanic Resurrection (2016)/Mechanic Resurrection (2016) [Jason Statham] 1080p BluRay H264 DolbyD 5.1 + nickarad/Mechanic Resurrection (2016) 1080p BluRay H264 DolbyD 5.1 + nickarad.mp4
+  KEEP:           Movies/General/Mechanic Resurrection (2016)/Mechanic Resurrection (2016) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/The Breakfast Club 1985 REMASTERED/The.Breakfast.Club.1985.REMASTERED.1080p.BluRay.H264.AAC5.1.mp4
+  KEEP:           Movies/General/The Breakfast Club (1985)/The Breakfast Club (1985) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/Transcendence (2014)/Transcendence (2014) [1080p]/Transcendence.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Transcendence (2014)/Transcendence (2014) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/Hairspray (2007)/Hairspray (2007) [1080p]/Hairspray.2007.1080p.BluRay.x264.YIFY-Copy(1).mp4
+  KEEP:           Movies/General/Hairspray (2007)/Hairspray (2007) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/Hairspray (2007)/Hairspray (2007) [1080p]/Hairspray.2007.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Hairspray (2007)/Hairspray (2007) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/Ready or Not 2019/Ready.or.Not.2019.1080p.BluRay.H264.AAC-RARBG.mp4
+  KEEP:           Movies/General/Ready or Not (2019)/Ready or Not (2019) Bluray-1080p.mp4
+
+  DEL (1.8GB): Movies/General/In the Shadow of the Moon (2019)/In the Shadow of the Moon (2019) WEBRip-1080p.mp4
+  KEEP:           Movies/General/In The Shadow Of The Moon (2019) [WEBRip] [1080p]/In.The.Shadow.Of.The.Moon.2019.1080p.WEBRip.x264-[YTS.LT].mp4
+
+  DEL (1.7GB): Movies/Kids/Buckleys.Chance.2021.1080p.WEBRip.DD5.1.X.264-EVO/Buckleys.Chance.2021.1080p.WEBRip.DD5.1.X.264-EVO.mkv
+  KEEP:           Movies/Kids/Buckley's Chance (2021)/Buckley's Chance (2021) WEBRip-1080p.mkv
+
+  DEL (1.7GB): Movies/General/Victoria and Abdul 2017/Victoria.and.Abdul.2017.1080p.10bit.BluRay.6CH.x265.HEVC-PSA.mkv
+  KEEP:           Movies/General/Victoria & Abdul (2017)/Victoria & Abdul (2017) Bluray-1080p.mkv
+
+  DEL (1.7GB): Movies/General/Rams 2020/Rams.2020.1080p.BluRay.1400MB.DD5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Rams (2020)/Rams (2020) Bluray-1080p.mkv
+
+  DEL (1.7GB): Movies/Kids/Eagle.Vs.Shark.2007.1080p.BluRay.H264.AAC-RARBG/Eagle.Vs.Shark.2007.1080p.BluRay.H264.AAC-RARBG.mp4
+  KEEP:           Movies/General/Eagle vs Shark (2007)/Eagle vs Shark (2007) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/Think Like a Man Too (2014)/Think Like a Man Too (2014) [1080p]/Think.Like.a.Man.Too.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Think Like a Man Too (2014)/Think Like a Man Too (2014) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/The Fluffy Movie Unity Through Laughter (2014)/The.Fluffy.Movie.Unity.Through.Laughter.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/The Fluffy Movie (2014)/The Fluffy Movie (2014) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/Kids/Aloha (2015)/Aloha (2015) Bluray-1080p.mp4
+  KEEP:           Movies/Kids/Aloha (2015) [1080p]/Aloha.2015.1080p.BluRay.x264.YIFY.mp4
+
+  DEL (1.6GB): Movies/General/Woman in Gold (2015)/Woman in Gold (2015) [1080p]/Woman.in.Gold.2015.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Woman in Gold (2015)/Woman in Gold (2015) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/Shanghai (2010)/Shanghai (2010) [1080p]/Shanghai.2010.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Shanghai (2010)/Shanghai (2010) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/Dope (2015)/Dope (2015) [1080p]/Dope.2015.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Dope (2015)/Dope (2015) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/Ex Machina (2015)/Ex Machina (2015) [1080p]/Ex.Machina.2015.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Ex Machina (2015)/Ex Machina (2015) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/Supernova 2020/Supernova.2020.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265.mkv
+  KEEP:           Movies/General/Supernova (2020)/Supernova (2020) Bluray-1080p.mkv
+
+  DEL (1.6GB): Movies/General/Zombies 2017/Zombies.2017.1080p.BluRay.H264.AAC-RARBG.mp4
+  KEEP:           Movies/General/Zombies (2017)/Zombies (2017) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/The Pale Blue Eye 2022 REPACK/The.Pale.Blue.Eye.2022.REPACK.1080p.NF.WEBRip.1600MB.DD5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/The Pale Blue Eye (2022)/The Pale Blue Eye (2022) WEBRip-1080p Proper.mkv
+
+  DEL (1.6GB): Movies/General/Young Ones 2014/Young.Ones.2014.1080p.BluRay.x265-RARBG.mp4
+  KEEP:           Movies/General/Young Ones (2014)/Young Ones (2014) Bluray-1080p.mp4
+
+  DEL (1.6GB): Movies/General/The Beach (2000)/The.Beach.2000.1080p.BrRip.x264.YIFY.mp4
+  KEEP:           Movies/General/The Beach (2000)/The Beach (2000) [1080p]/The.Beach.2000.1080p.BrRip.x264.YIFY.mp4
+
+  DEL (1.5GB): Movies/General/Hodejegerne (2011)/Hodejegerne.2011.BluRay.1080p.DTS.x264 (2).mkv
+  KEEP:           Movies/General/Headhunters (2011)/Headhunters (2011) Bluray-1080p.mkv
+
+  DEL (1.5GB): TV/General/Foundation (2021)/Season 03/Foundation (2021) - S03E05 - Where Tyrants Spend Eternity.mkv
+  KEEP:           Movies/General/The Bad Guys 2 (2025)/The Bad Guys 2 (2025) WEBDL-1080p.mkv
+
+  DEL (1.5GB): TV/General/Star Trek - Strange New Worlds/Season 03/Star Trek - Strange New Worlds - S03E05 - Through the Lens of Time.mkv
+  KEEP:           Movies/General/The Bad Guys 2 (2025)/The Bad Guys 2 (2025) WEBDL-1080p.mkv
+
+  DEL (1.5GB): TV/General/Twisted Metal/Season 02/Twisted Metal - S02E04 - LZGTBZY.mkv
+  KEEP:           Movies/General/The Bad Guys 2 (2025)/The Bad Guys 2 (2025) WEBDL-1080p.mkv
+
+  DEL (1.5GB): Movies/General/Repo Men (2010)/Repo Men (2010) [1080p]/Repo Men (2010) Unrated 1080p BrRip x264 YIFY.mp4
+  KEEP:           Movies/General/Repo Men (2010)/Repo Men (2010) Bluray-1080p.mp4
+
+  DEL (1.5GB): Movies/General/The Year of Living Dangerously (1982)/The Year of Living Dangerously (1982) Bluray-1080p.mkv
+  KEEP:           Movies/General/The Year of Living Dangerously (1982)/The Year of Living Dangerously (1982) 1080p BluRay LQ AV1 Opus 2.0 [RAV1NE]/The.Year.of.Living.Dangerously.1982.1080p.BluRay.LQ.AV1.Opus.2.0-RAV1NE.mkv
+
+  DEL (1.4GB): Movies/General/Scouts Guide To The Zombie Apocalypse 2015/Scouts.Guide.To.The.Zombie.Apocalypse.2015.1080p.BluRay.x265.mp4
+  KEEP:           Movies/General/Scouts Guide to the Zombie Apocalypse (2015)/Scouts Guide to the Zombie Apocalypse (2015) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/General/Edie.2018.BRRip.XviD.AC3-EVO[EtMovies]/Edie.2018.BRRip.XviD.AC3-EVO[EtMovies].avi
+  KEEP:           Movies/General/Edie (2018)/Edie (2018) Bluray-480p.avi
+
+  DEL (1.4GB): Movies/Kids/Home (2015)/Home (2015) Bluray-1080p.mp4
+  KEEP:           Movies/Kids/Home (2015) [1080p]/Home.2015.1080p.BluRay.x264.YIFY.mp4
+
+  DEL (1.4GB): Movies/General/The Imposter (2012)/The Imposter (2012) [1080p]/The.Imposter.2012.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/The Imposter (2012)/The Imposter (2012) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/General/The Cobbler (2014)/The Cobbler (2014) [1080p]/The.Cobbler.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/The Cobbler (2014)/The Cobbler (2014) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/General/Frank (2014)/Frank (2014) [1080p]/Frank.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Frank (2014)/Frank (2014) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/General/Fresh Meat (2012)/Fresh Meat (2012) [1080p]/Fresh.Meat.2012.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Fresh Meat (2012)/Fresh Meat (2012) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/General/The Inbetweeners 2 (2014)/The Inbetweeners 2 (2014) [1080p]/The.Inbetweeners.2.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/The Inbetweeners 2 (2014)/The Inbetweeners 2 (2014) Bluray-1080p.mp4
+
+  DEL (1.4GB): Movies/Kids/Wonder.Park.2019.1080p.10bit.BluRay.8CH.x265.HEVC-PSA/Wonder.Park.2019.1080p.10bit.BluRay.8CH.x265.HEVC-PSA.mkv
+  KEEP:           Movies/Kids/Wonder Park (2019)/Wonder Park (2019) Bluray-1080p.mkv
+
+  DEL (1.4GB): Movies/General/Roadrunner A Film About Anthony Bourdain 2021/Roadrunner.A.Film.About.Anthony.Bourdain.2021.1080p.WEBRip.1400MB.DD5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Roadrunner A Film About Anthony Bourdain (2021)/Roadrunner A Film About Anthony Bourdain (2021) WEBRip-1080p.mkv
+
+  DEL (1.4GB): Movies/Kids/Elvis.the.Pig.2022.1080p.AMZN.WEBRip.1400MB.DD5.1.x264-GalaxyRG[TGx]/Elvis.the.Pig.2022.1080p.AMZN.WEBRip.1400MB.DD5.1.x264-GalaxyRG.mkv
+  KEEP:           Movies/Kids/Elvis the Pig (2022)/Elvis the Pig (2023) WEBRip-1080p.mkv
+
+  DEL (1.3GB): Movies/General/Eden.2014.BRRip.XviD.AC3-EVO/Eden.2014.BRRip.XviD.AC3-EVO.avi
+  KEEP:           Movies/General/Eden (2014)/Eden (2014) Bluray-480p.avi
+
+  DEL (1.3GB): Movies/General/www Torrenting com         Mystify Michael Hutchence 2019 DVDRip x264-PFa/pfa-mystify.michael.hutchence.mkv
+  KEEP:           Movies/General/Mystify Michael Hutchence (2019)/Mystify Michael Hutchence (2019) DVD.mkv
+
+  DEL (1.3GB): Movies/Kids/Mulan (1998) [1080p]/Mulan.1998.1080p.BRrip.x264.GAZ.YIFY.mp4
+  KEEP:           Movies/General/Mulan (1998)/Mulan (1998) Bluray-1080p.mp4
+
+  DEL (1.2GB): Movies/Kids/Pocahontas (1995) [1080p]/Pocahontas.1995.1080p.BrRip.x264.YIFY.mp4
+  KEEP:           Movies/General/Pocahontas (1995)/Pocahontas (1995) Bluray-1080p.mp4
+
+  DEL (1.2GB): Movies/Kids/Boy (2010) [1080p]/Boy.2010.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Boy (2010)/Boy (2010) Bluray-1080p.mp4
+
+  DEL (1.2GB): Movies/Kids/Boy (2010)/Boy (2010) Bluray-1080p.mp4
+  KEEP:           Movies/General/Boy (2010)/Boy (2010) Bluray-1080p.mp4
+
+  DEL (1.2GB): Movies/Kids/Shaun the Sheep Movie (2015) [1080p]/Shaun.the.Sheep.Movie.2015.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Shaun the Sheep Movie (2015)/Shaun the Sheep Movie (2015) Bluray-1080p.mp4
+
+  DEL (1.2GB): Movies/General/Dinosaur Island (2014)/Dinosaur Island (2014) [1080p]/Dinosaur.Island.2014.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Dinosaur Island (2014)/Dinosaur Island (2014) Bluray-1080p.mp4
+
+  DEL (1.2GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome To Wrexham S03E07 720p DSNP WEB-DL DDP5 1 H 264-NTb[TGx]/Welcome.To.Wrexham.S03.720p.DSNP.WEB-DL.DDP5.1.H.264-NTb/Welcome.To.Wrexham.S03.720p.DSNP.WEB-DL.DDP5.1.H.264-NTb.mkv
+  KEEP:           TV/General/Welcome to Wrexham/Season 03/Welcome to Wrexham - S03E07.mkv
+
+  DEL (1.2GB): Movies/Kids/Tarzan (1999)/Tarzan (1999) Bluray-1080p.mp4
+  KEEP:           Movies/Kids/Tarzan (1999) [1080p]/Tarzan.1999.1080p.BrRip.x264.YIFY.mp4
+
+  DEL (1.1GB): Movies/General/The Australian Dream 2019 DVDRip x264-PFa/pfa-the.australian.dream.mkv
+  KEEP:           Movies/General/The Australian Dream (2019)/The Australian Dream (2019) DVD.mkv
+
+  DEL (1.0GB): Movies/Kids/Shrek 2 (2004) [1080p]/Shrek.2.2004.1080p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Shrek 2 (2004)/Shrek 2 (2004) Bluray-1080p.mp4
+
+  DEL (0.9GB): Movies/General/www Torrenting com   -    The Subtle Art of Not Giving a Fuck 2023 WEBRip x264/The.Subtle.Art.of.Not.Giving.a.Fuck.2023.WEBRip.x264.mp4
+  KEEP:           Movies/General/The Subtle Art of Not Giving a #@%! (2023)/The Subtle Art of Not Giving a #@%! (2023) WEBRip-480p.mp4
+
+  DEL (0.8GB): Movies/Kids/Encanto At The Hollywood Bowl (2022) [1080p] [WEBRip] [5.1] [YTS.MX]/Encanto.At.The.Hollywood.Bowl.2022.1080p.WEBRip.x264.AAC5.1-[YTS.MX].mp4
+  KEEP:           Movies/General/Encanto at the Hollywood Bowl (2022)/Encanto at the Hollywood Bowl (2022) WEBRip-1080p.mp4
+
+  DEL (0.8GB): Movies/General/www Torrenting com   -    A Lego Brickumentary (2014)/A.Lego.Brickumentary.2014.720p.BluRay.x264.AAC-LAMA.mp4
+  KEEP:           Movies/General/A LEGO Brickumentary (2014)/A LEGO Brickumentary (2014) Bluray-720p.mp4
+
+  DEL (0.8GB): Movies/General/Sour Grapes 2016 WEB x264-STRiFE/sour.grapes.2016.web.x264-strife[ettv].mkv
+  KEEP:           Movies/General/Sour Grapes (2016)/Sour Grapes (2016) WEBDL-480p.mkv
+
+  DEL (0.8GB): Movies/General/Teen Wolf 1985/Teen.Wolf.1985.720p.WEBRip.800MB.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Teen Wolf (1985)/Teen Wolf (1985) WEBRip-720p.mkv
+
+  DEL (0.8GB): Movies/General/Greed 2020/Greed.2020.720p.WEBRip.800MB.x264-GalaxyRG.mkv
+  KEEP:           Movies/General/Greed (2020)/Greed (2020) WEBRip-720p.mkv
+
+  DEL (0.7GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E09.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E09.mp4
+
+  DEL (0.7GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E18.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E18.mp4
+
+  DEL (0.7GB): Movies/General/Supermensch The Legend of Shep Gordon (2013)/Supermensch.The.Legend.of.Shep.Gordon.2013.720p.BluRay.x264.YIFY.mp4
+  KEEP:           Movies/General/Supermensch The Legend of Shep Gordon (2013)/Supermensch The Legend of Shep Gordon (2013) Bluray-720p.mp4
+
+  DEL (0.7GB): Movies/General/Snatched 2017/Snatched.2017.720p.BrRip.2CH.x265.HEVC-PSA.mkv
+  KEEP:           Movies/General/Snatched (2017)/Snatched (2017) Bluray-720p.mkv
+
+  DEL (0.6GB): Movies/General/Transformers Rise of the Beasts 2023/Transformers Rise of the Beasts.2023.720p.WEB.h264-SKYFiRE.avi
+  KEEP:           Movies/General/Transformers Rise of the Beasts (2023)/Transformers Rise of the Beasts (2023) WEBDL-480p.avi
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E01.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E01.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E02.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E02.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E08.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E08.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E07.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E07.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E06.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E06.mp4
+
+  DEL (0.4GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E05.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E05.mkv
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E03.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E03.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E11.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E11.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E05.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E05.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E12.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E12.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E15.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E15.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E04.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E04.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E16.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E16.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E10.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E10.mp4
+
+  DEL (0.4GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E13.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E13.mp4
+
+  DEL (0.3GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E14.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E14.mp4
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E11.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E11.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E04.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E04.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E09.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E09.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E03.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E03.mkv
+
+  DEL (0.3GB): TV/General/Welcome to Wrexham/Welcome.To.Wrexham.S01.1080p.WEBRip.x265[eztv.re]/Welcome.To.Wrexham.S01E17.1080p.WEBRip.x265-RARBG[eztv.re].mp4
+  KEEP:           TV/General/Welcome to Wrexham/Season 01/Welcome to Wrexham - S01E17.mp4
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E10.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E10.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E02.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E02.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E08.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E08.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E06.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E06.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E01.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E01.mkv
+
+  DEL (0.3GB): TV/General/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3)/Season 04/Dungeon Ni Deai Wo Motomeru No Wa Machigatteiru Darou Ka iii (Season 3) - S04E07.mkv
+  KEEP:           TV/General/DanMachi/Season 04/DanMachi - S04E07.mkv
+
+  DEL (0.2GB): Movies/General/The Day The Earth Stood Still 2008 Open Matte WEBRip/Movie and Sample/The Day The Earth Stood Still Open Matte sample.mkv
+  KEEP:           Movies/General/The Day The Earth Stood Still (2008)/Movie and Sample/The Day The Earth Stood Still Open Matte sample.mkv
+
+  DEL (0.0GB): Movies/General/Fight Club (1999)/Fight Club (1999)  [2160p x265 10bit Joy]/Featurettes/A Hit on the Ear Ren Klyce and the Sound Design of Fight Club-Copy(1).mkv
+  KEEP:           Movies/General/Fight Club (1999)/Fight Club (1999)  [2160p x265 10bit Joy]/Featurettes/A Hit on the Ear Ren Klyce and the Sound Design of Fight Club.mkv
+

@@ -1,6 +1,6 @@
 services:
   readarr:
-    image: lscr.io/linuxserver/readarr:develop
+    image: lscr.io/linuxserver/readarr:nightly-0.4.19.2811-ls400
     container_name: readarr
     environment:
       - PUID=1000

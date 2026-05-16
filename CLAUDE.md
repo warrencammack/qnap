@@ -1,3 +1,10 @@
+# RESPONSE RULES
+- 3-6 word sentences max
+- No preamble, no pleasantries
+- Drop articles (a, an, the)
+- Tool first, result, stop. No narration.
+- Skip confirmations. Just do.
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -19,7 +26,7 @@ This is a QNAP NAS media management system with two main components:
 ## Architecture
 
 ### Media Services (`/Composer/`)
-- **Services**: Sonarr, Radarr, Readarr, Prowlarr, SABnzbd, Transmission, Heimdall, FileBot
+- **Services**: Sonarr, Radarr, Readarr, Prowlarr, SABnzbd, Transmission, Heimdall, FileBot, FlareSolverr
 - **Network**: Uses shared `app_network` for inter-service communication plus default bridge
 - **Storage**: Persistent volumes mapped to QNAP shared folders (`/share/Container/containerapp/`, `/share/Multimedia/`, `/share/Public/Complete/`)
 - **Configuration**: All services use PUID=1000, PGID=100, TZ=Australia/Sydney
