@@ -205,11 +205,20 @@ dmsetup create vg1-lv1 --table "0 32906412032 thin /dev/mapper/vg1-tp1-tpool 1"
 
 # 5. Mount
 mount -t ext4 /dev/mapper/vg1-lv1 /share/CACHEDEV1_DATA
+
+# 6. CRITICAL: Rename dm device to cachedev1 (QNAP web UI requires this name)
+# QNAP's storage_util checks /dev/mapper/cachedev1 — without this rename, web UI
+# shows "no storage volume detected" even though the filesystem is mounted.
+dmsetup rename vg1-lv1 cachedev1
+
+# 7. Run volume scan to register with QNAP management layer
+/sbin/storage_util --volume_scan do_scan_raid=0 force=1
 ```
 
 ### If NAS reboots and doesn't come up
 - SSH in (enable SSH first via web UI at https://10.1.1.5)
 - Run manual activation steps above (or use LVM: `lvchange --config "global{thin_check_executable=\"/bin/true\"}" -ay vg1/lv1`)
+- **After mounting, always run `dmsetup rename vg1-lv1 cachedev1` and `/sbin/storage_util --volume_scan do_scan_raid=0 force=1`**
 - Then start Container Station: `QPKG_DIR=/share/CACHEDEV1_DATA/.qpkg/container-station; export PATH="$QPKG_DIR/bin:$QPKG_DIR/usr/bin:$PATH"; $QPKG_DIR/container-station.sh start`
 
 ## Prompt for New Session
