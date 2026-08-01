@@ -6,7 +6,7 @@ services:
       - PUID=1000
       - PGID=100
       - TZ=Australia/Sydney
-      - UMASK=000                          # Set permissive umask to help with permission issues
+      - UMASK=002                          # Group-writable files without world-write permissions
       - SKIP_CHOWN=true                    # Skip ownership change operations
     volumes:
       - /share/Container/containerapp/readarr/data:/config
@@ -18,7 +18,6 @@ services:
     ports:
       - 8787:8787
     restart: unless-stopped
-    privileged: true                       # Running in privileged mode
     networks:
       - default
       - shared_network
@@ -26,4 +25,5 @@ networks:
   default:
     driver: bridge
   shared_network:
-    name: app_network                     # Running in privileged mode
+    name: app_network
+    external: true

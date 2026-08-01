@@ -6,13 +6,13 @@ services:
       - PUID=1000                          # User ID - this is the 'automedia' user
       - PGID=100                          # Group ID
       - TZ=Australia/Sydney                         # Timezone
+      - BLOCKLIST=true                     # Enable blocklist
+      - BLOCKLIST_URL=https://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz # Verified 2026-05-23
+      - UMASK=002                          # Group-writable; all services share PGID=100 so cross-service file access works
+      - SKIP_CHOWN=true                    # Skip ownership change operations
       #- TRANSMISSION_WEB_HOME=/transmission-web-control/ # Web UI (using built-in transmission-web-control) # Web UI (optional) - Transmission no longer bundles UI.
     env_file:
       - ./transmission.env             # WebUI credentials - copy transmission.env.example and fill in
-      - BLOCKLIST=true                     # Enable blocklist
-      - BLOCKLIST_URL=https://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz # Example blocklist URL
-      - UMASK=002                          # Group-writable; all services share PGID=100 so cross-service file access works
-      - SKIP_CHOWN=true                    # Skip ownership change operations
     volumes:
       - /share/Container/containerapp/transmission/data:/config # Config files
       - /share/Public/Incomplete:/downloads/incomplete      # Downloads location with shared mount flag :shared 
@@ -32,3 +32,4 @@ networks:
     driver: bridge
   shared_network:
     name: app_network
+    external: true

@@ -16,7 +16,6 @@ services:
     ports:
       - 7676:7676 # FileBot web interface port
     restart: unless-stopped
-    privileged: true # Running in privileged mode
     networks:
       - default
       - shared_network

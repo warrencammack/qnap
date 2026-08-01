@@ -53,9 +53,9 @@ Services are configured with two networks:
 
 ## Notes
 
-- Services run in privileged mode to ensure proper access to NAS resources
-- UMASK is set to 000 to help with permission issues
-- SKIP_CHOWN is enabled to avoid ownership change operations
+- Media services should not run in privileged mode unless explicitly documented and approved
+- UMASK is set per service; download clients use group-writable settings for shared imports
+- SKIP_CHOWN is enabled where needed to avoid ownership change operations
 
 ## Requirements
 

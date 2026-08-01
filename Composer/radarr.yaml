@@ -21,3 +21,4 @@ networks:
     driver: bridge
   shared_network:
     name: app_network
+    external: true

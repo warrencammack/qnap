@@ -13,7 +13,6 @@ services:
     ports:
       - 9696:9696
     restart: unless-stopped
-    privileged: true  
     networks:
       - default
       - shared_network
@@ -21,4 +20,5 @@ networks:
   default:
     driver: bridge
   shared_network:
-    name: app_network                     # Running in privileged mode
+    name: app_network
+    external: true

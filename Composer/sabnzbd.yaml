@@ -16,3 +16,12 @@ services:
       - 8181:8080 # was 8080:8080
     restart: unless-stopped
     # privileged mode removed - not required by linuxserver.io images; PUID/PGID + SKIP_CHOWN handle permissions
+    networks:
+      - default
+      - shared_network
+networks:
+  default:
+    driver: bridge
+  shared_network:
+    name: app_network
+    external: true
