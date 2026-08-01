@@ -27,6 +27,16 @@ Track key architectural and implementation decisions.
 
 ---
 
+## [2026-08-01] RAID Scrub Rescheduled to Last Sunday of Month
+
+**Decision**: Disable QNAP's native monthly data-scrubbing schedule (fixed day-of-month) and replace it with `scripts/raid-scrub-last-sunday.sh`, cron'd every Sunday at 2:15am, which only triggers `storage_util --data_scrubbing` when the current Sunday is the last one in the month.
+**Context**: Native scrub was fixed to the 1st of the month (`storage_util --set_data_scrubbing_schedule ... type=3,month_day=1`). Requested change to "last Sunday of the month" — `storage_util` only supports type 1 (daily), 2 (weekly, fixed weekday), or 3 (monthly, fixed day-of-month); no "Nth/last weekday of month" option exists natively.
+**Options Considered**: Approximate with a fixed month_day near month-end (e.g. 28th); wrapper script gating the real trigger.
+**Choice**: Wrapper script, scheduled every Sunday, checks whether `date +%m` differs from `date -d '+7 days' +%m` (i.e. no more Sundays left this month) before calling `storage_util --data_scrubbing raid_id=-1`.
+**Reasoning**: Exact date-string match to "last Sunday" requested; a fixed day-of-month approximation would drift relative to the actual weekday. Disabling via `storage_util --set_data_scrubbing_schedule enable=0,...` (rather than hand-editing crontab) let QNAP's own daemon comment out its crontab line correctly, avoiding a stale duplicate schedule.
+**Trade-offs**: Scrub timing now depends on cron firing every Sunday (52 no-op runs/year, cheap) rather than a single native monthly entry.
+**References**: scripts/raid-scrub-last-sunday.sh
+
 ## [2026-08-01] Transmission exe-payload Guard
 
 **Decision**: Add `scripts/transmission-exe-guard.sh`, cron'd every 5 min, to auto-remove torrents whose file manifest contains executable/script payloads (.exe, .scr, .bat, .cmd, .msi, .vbs, .vbe, .jse, .js, .ps1, .jar, .com, .pif, .lnk, .wsf).
