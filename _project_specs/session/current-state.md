@@ -9,36 +9,40 @@ After each task, ask: Decision made? >10 tool calls? Feature done?
 
 # Current Session State
 
-*Last updated: 2026-02-22*
+*Last updated: 2026-06-21 AEST*
 
 ## Active Task
-Project initialized with Claude skills and specs structure.
+None — transmission exe-payload guard deployed and verified.
 
 ## Current Status
-- **Phase**: planning
-- **Progress**: Initial setup complete
+- **Phase**: completed
+- **Progress**: scripts/transmission-exe-guard.sh deployed to NAS, cron'd every 5 min, verified clean run against 136 live torrents
 - **Blocking Issues**: None
 
 ## Context Summary
-QNAP NAS media management project. Two main components: Docker Compose service definitions (Composer/) and automated update system (Auto Update/). Services include Sonarr, Radarr, Readarr, Prowlarr, SABnzbd, Transmission, Heimdall, and FileBot. Updates are automated weekly via cron with rollback protection and Slack notifications.
+QNAP NAS media management project. Prior session's fix for rogue .exe torrents was interrupted (Transmission container had restarted ~20h before this session, no trace of that work survived in git/memory). Live audit on 2026-08-01 found no .exe on disk (Complete/Incomplete) or in any active torrent's file manifest, and the iblocklist was intact. Added a dedicated file-manifest guard as a proactive complement to the existing size guard and IP blocklist.
 
 ## Files Being Modified
 | File | Status | Notes |
 |------|--------|-------|
-| - | - | - |
+| scripts/transmission-exe-guard.sh | Done | New — scans torrent file manifests for blocked extensions, removes matches, cron'd */5 |
+| _project_specs/session/current-state.md | Done | Session checkpoint |
+| _project_specs/session/decisions.md | Done | Decision logged |
 
 ## Next Steps
-1. [ ] Review pending changes in Auto Update/INSTALLATION.md and Auto Update/auto-update.sh
-2. [ ] Review new Auto Update/deploy-to-qnap.sh script
+1. [ ] Test myQNAPcloud relay access remotely to confirm fix holds
+2. [ ] Keep all management ports blocked for new unsolicited inbound sessions
 
 ## Key Context to Preserve
 - QNAP IP: 10.1.1.5, SSH via `ssh -i ~/.ssh/qnap_rsa_key admin@10.1.1.5`
 - Docker path on QNAP: `/share/CACHEDEV1_DATA/.qpkg/container-station/bin`
 - All services use isolated compose projects: `docker compose -p <name> -f <name>.yaml`
 - Volume standard: `/share/Public/Complete:/downloads/complete` for all download-aware services
+- Plex remote access allowed on TCP 32400; relay continuity via conntrack ESTABLISHED,RELATED
+- SSH is always left enabled on this NAS — do not disable after maintenance
 
 ## Resume Instructions
 To continue this work:
 1. Read `_project_specs/session/current-state.md`
-2. Check `_project_specs/todos/active.md`
-3. Review git status for in-progress changes
+2. Check `scripts/nas-lan-only-firewall.sh`
+3. Verify live NAS rule with `iptables -S CODEX_LAN_ONLY`
