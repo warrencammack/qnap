@@ -26,6 +26,14 @@ Track key architectural and implementation decisions.
 ```
 
 ---
+## [2026-09-12] NAS DNS Outage — Stale Tailscale resolv.conf
+
+**Decision**: Restore `/etc/resolv.conf` to `nameserver 10.1.1.1` + `1.1.1.1` after Tailscale container was removed while its MagicDNS override (`100.100.100.100`) remained active.
+**Context**: NAS unreachable by name resolution; WAN ping and direct DNS worked.
+**Choice**: Manual resolv.conf restore (backup at `/etc/resolv.conf.pre-fix`).
+**Trade-offs**: If Tailscale is redeployed, it will re-take resolv.conf — ensure MagicDNS/accept-dns is intentionally configured then.
+**References**: Composer/tailscale.yaml
+
 
 ## [2026-08-01] RAID Scrub Rescheduled to Last Sunday of Month
 

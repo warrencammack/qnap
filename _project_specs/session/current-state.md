@@ -9,10 +9,10 @@ After each task, ask: Decision made? >10 tool calls? Feature done?
 
 # Current Session State
 
-*Last updated: 2026-06-21 AEST*
+*Last updated: 2026-09-12 AEST*
 
 ## Active Task
-None — transmission exe-payload guard deployed and verified.
+None — resolved NAS DNS outage caused by stale Tailscale resolv.conf.
 
 ## Current Status
 - **Phase**: completed
